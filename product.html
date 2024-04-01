@@ -1,0 +1,626 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a class="col-3 header-logo h-100 px-4" href="index.html">
+            <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo.png?1710827597851" alt=""
+                height="45">
+        </a>
+
+        <div class="col-4 header-search">
+            <form class="header-form d-flex" action="/" method="GET">
+                <input type="text" name="search" data-placeholder="Tìm theo danh mục...; 
+        Tìm theo mã sản phẩm...;" placeholder=" ìm th">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="col-5 d-flex justify-content-end px-4">
+            <div class="header-phone d-flex align-items-center">
+                <i class="fa-solid fa-phone-volume header-icon"></i>
+                <div class="header-text">
+                    <span class="d-block">Liên hệ hỗ trợ</span>
+                    <span class="header-text-info">(035) 664 5052</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center px-4">
+                <i class="fa-solid fa-user header-icon"></i>
+                <div class="header-text">
+                    <span class="d-block">Tài khoản</span>
+                    <span class="header-text-info">Đăng nhập</span>
+                </div>
+            </div>
+            <a class="header-cart d-flex align-items-center" href="#">
+                <i class="fa-solid fa-cart-shopping header-icon"></i>
+                <div class="header-text">
+                    <span class="header-text-info">Giỏ hàng</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <section class="menu">
+        <div class="d-flex px-4">
+            <div class="menu-category d-flex align-items-center">
+                <i class="fa-solid fa-list"></i>
+                <span>Danh mục sản phẩm</span>
+            </div>
+            <ul class="menu-list d-flex align-items-center">
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Trang chủ</a>
+                </li>
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Sản phẩm</a>
+                </li>
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Tin tức</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="d-flex justify-content-between px-4 mt-6">
+        <div class="coupon-item d-flex align-items-center">
+            <div class="coupon-item-img">
+                <img src="assets/img/coupon.png" alt="">
+                <div class="coupon-item-discount">
+                    <span class="coupon-item-discount-title">Giảm giá</span>
+                    <span class="coupon-item-discount-value">10%</span>
+                </div>
+            </div>
+            <div class="coupon-item-info">
+                <div class="coupon_head">
+                    <h3 class="coupon_title">NHẬP MÃ: BR10</h3>
+                    <div class="coupon_desc">Mã giảm 10% cho đơn hàng tối thiểu 500k. </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-main btn-sm coupon_copy" data-ega-coupon="BR10"><span>Sao
+                            chép</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="coupon-item d-flex align-items-center">
+            <div class="coupon-item-img">
+                <img src="assets/img/coupon.png" alt="">
+                <div class="coupon-item-discount">
+                    <span class="coupon-item-discount-title">Giảm giá</span>
+                    <span class="coupon-item-discount-value">10%</span>
+                </div>
+            </div>
+            <div class="coupon-item-info">
+                <div class="coupon_head">
+                    <h3 class="coupon_title">NHẬP MÃ: BR10</h3>
+                    <div class="coupon_desc">Mã giảm 10% cho đơn hàng tối thiểu 500k. </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-main btn-sm coupon_copy" data-ega-coupon="BR10"><span>Sao
+                            chép</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="coupon-item d-flex align-items-center">
+            <div class="coupon-item-img">
+                <img src="assets/img/coupon.png" alt="">
+                <div class="coupon-item-discount">
+                    <span class="coupon-item-discount-title">Giảm giá</span>
+                    <span class="coupon-item-discount-value">10%</span>
+                </div>
+            </div>
+            <div class="coupon-item-info">
+                <div class="coupon_head">
+                    <h3 class="coupon_title">NHẬP MÃ: BR10</h3>
+                    <div class="coupon_desc">Mã giảm 10% cho đơn hàng tối thiểu 500k. </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-main btn-sm coupon_copy" data-ega-coupon="BR10"><span>Sao
+                            chép</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="coupon-item d-flex align-items-center">
+            <div class="coupon-item-img">
+                <img src="assets/img/coupon.png" alt="">
+                <div class="coupon-item-discount">
+                    <span class="coupon-item-discount-title">Giảm giá</span>
+                    <span class="coupon-item-discount-value">10%</span>
+                </div>
+            </div>
+            <div class="coupon-item-info">
+                <div class="coupon_head">
+                    <h3 class="coupon_title">NHẬP MÃ: BR10</h3>
+                    <div class="coupon_desc">Mã giảm 10% cho đơn hàng tối thiểu 500k. </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-main btn-sm coupon_copy" data-ega-coupon="BR10"><span>Sao
+                            chép</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-6 px-4">
+        <div class="d-flex justify-content-between">
+            <a href="#" class="title-main-header-title">Danh mục nổi bật</a>
+        </div>
+
+        <div class="row mt-5 d-flex justify-content-between">
+            <div class="w-20">
+                <div class="me-4">
+                    <div class="filter">
+                        <span class="filter-title d-block pb-4">Mức giá</span>
+                        <ul class="filter-list">
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá dưới 100.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">100.000đ - 200.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">200.000đ - 300.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">300.000đ - 500.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">500.000đ - 1.000.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá trên 1.000.000đ</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter mt-4">
+                        <span class="filter-title d-block pb-4">Kích thước</span>
+                        <ul class="filter-list">
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá dưới 100.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">100.000đ - 200.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">200.000đ - 300.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">300.000đ - 500.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">500.000đ - 1.000.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá trên 1.000.000đ</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter mt-4">
+                        <span class="filter-title d-block pb-4">Màu sắc</span>
+                        <ul class="filter-list">
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá dưới 100.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">100.000đ - 200.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">200.000đ - 300.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">300.000đ - 500.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">500.000đ - 1.000.000đ</label>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <input class="filter-input" type="checkbox">
+                                <label class="filter-lable" for="cssc">Giá trên 1.000.000đ</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <div></div>
+                <div class="row">
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a
+                                    a a a a a a a a a a a a</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                            <div class="product-value-promotion">
+                                <span>Hot</span>
+                            </div>
+                            <div class="product-rating">
+                                <span class="product-rating-value">
+                                    <small class="text-primary fas fa-star"></small>
+                                    <p class="product-rating-number">3</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-2 col-xl-15 mb-4 w-25">
+                        <a href="#" class="product-item d-block">
+                            <div class="product-item-img w-100">
+                                <img class="w-100"
+                                    src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                            </div>
+                            <div class="product-item-info">
+                                <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                                <div class="product-price">
+                                    <span class="product-price-new"> 100.000đ</span>
+                                    <span class="product-price-old"> 100.000đ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <ul class="d-flex pagination">
+                        <li><a href=""><i class="fa-solid fa-angle-left"></i></a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href="">1</a></li>
+                        <li><a href=""><i class="fa-solid fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d-flex mt-6">
+        <div class="col-4 footer-left h-100" style="background: #41aea7;">
+            <div class="footer-logo">
+                <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo-footer.png?1710827597851"
+                    alt="">
+            </div>
+            <div class="footer-info mt-4">
+                <span class="footer-info-text">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn
+                    Quốc</span>
+                <div class="footer-info-profile mt-4">
+                    <span class="d-block"><i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa,
+                        Cầu Giấy,
+                        Hà Nội</span>
+                    <span class="d-block"><i class="fa-solid fa-mobile-screen-button"></i>Số điện thoại:
+                        0985.321.272</span>
+                    <span class="d-block"><i class="fa-solid fa-envelope"></i>Email: blackrouge.com.vn@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 footer-right h-100 d-flex" style="background: #47d0c7">
+            <div class="col-4 ps-5">
+                <div class="footer-right-header">
+                    Liên kết nhanh
+                </div>
+                <ul>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Trang chủ</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Sản phẩm</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Tin tức</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Giới thiệu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="footer-right-header">
+                    Chính sách cửa hàng
+                </div>
+                <ul>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Trang chủ</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Sản phẩm</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Tin tức</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Giới thiệu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="footer-right-header">
+                    Đăng ký nhận tin
+                </div>
+                <form class="header-form d-flex mt-3" action="" method="POST">
+                    <input type="text" placeholder="Nhập email đăng ký">
+                    <button><i class="fa-solid fa-envelope"></i></button>
+                </form>
+                <div class="footer-right-header mt-5">
+                    Mạng xã hội
+                </div>
+                <div class="footer-info-icon d-flex align-items-end mt-3">
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/facebook.webp"
+                            alt="facebook"></a>
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/zalo.webp" alt="zalo"></a>
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/tiktok.webp" alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-btn btn" id="scroll">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

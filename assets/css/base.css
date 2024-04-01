@@ -1,0 +1,52 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #884e4a;
+    --icon-color: #884e4a;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+.mt-6 {
+	margin-top: 6rem !important;
+}
+
+.btn-primary {
+	padding: 10px 15px;
+	border-radius: 2rem;
+	color: var(--primary-color);
+	min-width: 100px;
+	border: none;
+	font-size: 1.4rem;
+	background: #eee;
+	margin-left: 5px;
+}
+
+.btn-primary:hover {
+    color: white;
+	background: #af6964;
+}
+
+.btn-primary.active {
+	cursor: default;
+	color: white;
+	background: var(--primary-color);
+}
+
+.w-20 {
+	width: 20% !important;
+}
+
+.flex-1 {
+	flex: 1 !important;
+}
