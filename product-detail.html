@@ -1,0 +1,599 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a class="col-3 header-logo h-100 px-4" href="index.html">
+            <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo.png?1710827597851" alt=""
+                height="45">
+        </a>
+
+        <div class="col-4 header-search">
+            <form class="header-form d-flex" action="/" method="GET">
+                <input type="text" name="search" data-placeholder="Tìm theo danh mục...; 
+        Tìm theo mã sản phẩm...;" placeholder=" ìm th">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="col-5 d-flex justify-content-end px-4">
+            <div class="header-phone d-flex align-items-center">
+                <i class="fa-solid fa-phone-volume header-icon"></i>
+                <div class="header-text">
+                    <span class="d-block">Liên hệ hỗ trợ</span>
+                    <span class="header-text-info">(035) 664 5052</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center px-4">
+                <i class="fa-solid fa-user header-icon"></i>
+                <div class="header-text">
+                    <span class="d-block">Tài khoản</span>
+                    <span class="header-text-info">Đăng nhập</span>
+                </div>
+            </div>
+            <a class="header-cart d-flex align-items-center" href="#">
+                <i class="fa-solid fa-cart-shopping header-icon"></i>
+                <div class="header-text">
+                    <span class="header-text-info">Giỏ hàng</span>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <section class="menu mb-6">
+        <div class="d-flex px-4">
+            <div class="menu-category d-flex align-items-center">
+                <i class="fa-solid fa-list"></i>
+                <span>Danh mục sản phẩm</span>
+            </div>
+            <ul class="menu-list d-flex align-items-center">
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Trang chủ</a>
+                </li>
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Sản phẩm</a>
+                </li>
+                <li>
+                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Tin tức</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-6 px-5">
+        <div class="product-detail">
+            <div class="product-detail-img">
+                <div id="carouselExampleControlsNoTouching" class="carousel slide h-100" data-bs-touch="false">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active">
+                            <img src="https://bizweb.dktcdn.net/100/347/946/products/black-rouge-half-n-half-tinted-water-fda06acd-f7cd-447a-8ed0-2f4ebc1065c8.png?v=1705917506153"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://bizweb.dktcdn.net/100/347/946/products/black-rouge-half-n-half-tinted-water-fda06acd-f7cd-447a-8ed0-2f4ebc1065c8.png?v=1705917506153"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" style="color: black;">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="product-detail-info flex-1 px-4">
+                <div class="product-detail-header">
+                    <h1 class="product-detail-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a a a
+                        a a a a a a a a a a</h1>
+                    <span class="product-detail-sku">Mã SKU: 1314314</span>
+                </div>
+                <div class="product-detail-price">
+                    <span class="product-detail-price-new">1.000.000đ</span>
+                    <span class="product-detail-price-old">500.000đ</span>
+                    <span class="product-detail-price-sale d-flex justify-content-center align-items-center">-50%</span>
+                </div>
+
+                <form class="my-3" action="" method="get">
+                    <div class="product-detail-size d-flex align-items-center p-3">
+                        <span>Kích thước</span>
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+
+                    </div>
+                    <div class="product-detail-color d-flex align-items-center p-3">
+                        <span>Màu sắc</span>
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                        <input type="checkbox" value="3">
+                    </div>
+                    <div class="product-detail-quantity d-flex align-items-center p-3">
+                        <span>Số lượng</span>
+                        <a class="product-detail-btn d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-minus"></i>
+                        </a>
+                        <input type="text" value="3" class="product-detail-input mx-4" maxlength="3" min="1">
+                        <a class="product-detail-btn d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </form>
+                <div class="product-detail-summary pt-2">
+                    <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                        với tone hồng nude sang chảnh hứa hẹn “đốn tim” phái đẹp. Ngay từ ghi mới ra mắt, BST đã được
+                        đón nhận nhiệt tình nhờ bảng màu đa dạng và giá thành phải chăng. Nếu bạn đang tìm một loại son
+                        bền màu, phù hợp với mọi phong cách từ cá tính cho đến style “bánh bèo” thì hãy tham khảo ngay
+                        dòng son Black Rouge Muddish Cushion Velvet này nhé!</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="mt-5">
+            <ul class="nav nav-tabs product-detail-desc" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#one"
+                        type="button" role="tab" aria-controls="one" aria-selected="true">Mô tả</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#two" type="button"
+                        role="tab" aria-controls="two" aria-selected="false">Đánh giá</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class=" product-detail-content px-4">
+                        <p>
+                            Cách đây ba năm, Trường ĐH Kinh tế TP.HCM đưa ra chính sách khen thưởng cho giảng viên có
+                            bài báo công bố quốc tế. Mức thưởng cao nhất 200 triệu đồng/bài. Số lượng bài báo công bố
+                            quốc tế của trường cũng tăng dần đều trong những năm gần đây. Trong đó, năm 2016 có 44 bài,
+                            2017 là 57 bài, 2018 là 60 bài và năm 2019 có 82 bài.
+                        </p>
+                        <p>
+                            GS.TS Nguyễn Trọng Hoài - phó hiệu trưởng Trường ĐH Kinh tế TP.HCM - cho biết chính sách
+                            khuyến khích cũng phần nào giúp gia tăng bài báo quốc tế của trường bên cạnh các quy định về
+                            nghiên cứu khoa học bắt buộc đối với giảng viên, số tiến sĩ tăng, thành lập các nhóm nghiên
+                            cứu mạnh. Kinh phí thưởng tối đa mỗi năm khoảng 2 tỉ đồng.
+                        </p>
+                        <p>
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                alt="">
+                        </p>
+                        <p>
+                            Trong khi đó, số bài báo công bố quốc tế của Trường ĐH Mở TP.HCM tăng từ 16 bài năm 2017 lên
+                            62 bài năm 2018. PGS.TS Nguyễn Minh Hà, hiệu trưởng nhà trường, cho biết trường bắt đầu
+                            chính sách thưởng công bố quốc tế từ năm 2017 và có điều chỉnh mức thưởng theo hướng tăng
+                            lên. Mức thưởng dao động từ 40-100 triệu đồng/bài tùy loại tạp chí.
+                        </p>
+                        <p>
+                            Theo ông Hà, số bài báo quốc tế tăng lên có tác động rất lớn từ chính sách khuyến khích của
+                            trường.
+                        </p>
+                        <p>
+                            "Nếu không tự chủ, trường sẽ khó có thể đưa ra chính sách khuyến khích với mức thưởng như
+                            vậy do tài chính và các quy định liên quan. Việc thưởng tuy chưa nhiều nhưng đã tạo động lực
+                            cho giảng viên, nghiên cứu sinh chú ý hơn đến việc công bố. Giảng viên cũng chú ý kết nối
+                            với các giáo sư ở các trường nước ngoài".
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-pane fade product-detail-content" id="two" role="tabpanel"
+                    aria-labelledby="profile-tab" tabindex="0">
+                    <div class="d-flex w-100 px-4 pt-5">
+                        <div class="col-7">
+                            <ul class="review-list">
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                                <li class="review-item d-flex">
+                                    <div class="review-info d-flex align-items-center">
+                                        <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                            alt="">
+                                        <div class="review-author ms-4 flex-1">
+                                            <span class="review-name">Phan Nam</span>
+                                            <span class="review-time">24/02/2000</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-content mx-3">
+                                        <span>Son Black Rouge Muddish Cushion Velvet MV06 là sản phẩm son Tint, với thiết kế mới lạ, kết hợp
+                                            với tone hồng nude sang chảnh hứa hẹn</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-5 ms-5">
+                            <span class="review-title">Viết đánh giá</span>
+                            <form action="" class="mt-4">
+                                <div class="review-rating">
+                                    <span>Đánh giá:</span>
+                                    <small class="text-primary fas fa-star"></small>
+                                    <small class="text-primary fas fa-star"></small>
+                                    <small class="text-primary fas fa-star"></small>
+                                    <small class="text-primary fas fa-star"></small>
+                                    <small class="text-primary fas fa-star"></small>
+                                </div>
+                                <textarea class="review-input" name="" id="" cols="70" rows="10"></textarea>
+                                <button class="btn-primary mt-4">Đăng</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-6 px-4">
+        <a href="#" class="title-main-header-title">Sản phẩm cùng loại</a>
+        <div class="row mt-5">
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a a a
+                            a a a a a a
+                            a a a a</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                    <div class="product-value-promotion">
+                        <span>Hot</span>
+                    </div>
+                    <div class="product-rating">
+                        <span class="product-rating-value">
+                            <small class="text-primary fas fa-star"></small>
+                            <p class="product-rating-number">3</p>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-6 px-4">
+        <a href="#" class="title-main-header-title">Sản phẩm đã xem</a>
+        <div class="row mt-5">
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a a a
+                            a a a a a a
+                            a a a a</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                    <div class="product-value-promotion">
+                        <span>Hot</span>
+                    </div>
+                    <div class="product-rating">
+                        <span class="product-rating-value">
+                            <small class="text-primary fas fa-star"></small>
+                            <p class="product-rating-number">3</p>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-2 col-xl-15 mb-5 w-20">
+                <a href="#" class="product-item d-block">
+                    <div class="product-item-img w-100">
+                        <img class="w-100"
+                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                            alt="">
+                    </div>
+                    <div class="product-item-info">
+                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
+                        <div class="product-price">
+                            <span class="product-price-new"> 100.000đ</span>
+                            <span class="product-price-old"> 100.000đ</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d-flex">
+        <div class="col-4 footer-left h-100" style="background: #41aea7;">
+            <div class="footer-logo">
+                <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo-footer.png?1710827597851"
+                    alt="">
+            </div>
+            <div class="footer-info mt-4">
+                <span class="footer-info-text">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn
+                    Quốc</span>
+                <div class="footer-info-profile mt-4">
+                    <span class="d-block"><i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa,
+                        Cầu Giấy,
+                        Hà Nội</span>
+                    <span class="d-block"><i class="fa-solid fa-mobile-screen-button"></i>Số điện thoại:
+                        0985.321.272</span>
+                    <span class="d-block"><i class="fa-solid fa-envelope"></i>Email: blackrouge.com.vn@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 footer-right h-100 d-flex" style="background: #47d0c7">
+            <div class="col-4 ps-5">
+                <div class="footer-right-header">
+                    Liên kết nhanh
+                </div>
+                <ul>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Trang chủ</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Sản phẩm</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Tin tức</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Giới thiệu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="footer-right-header">
+                    Chính sách cửa hàng
+                </div>
+                <ul>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Trang chủ</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Sản phẩm</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Tin tức</a>
+                    </li>
+                    <li class="footer-right-item mt-3">
+                        <a href="http://">Giới thiệu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <div class="footer-right-header">
+                    Đăng ký nhận tin
+                </div>
+                <form class="header-form d-flex mt-3" action="" method="POST">
+                    <input type="text" placeholder="Nhập email đăng ký">
+                    <button><i class="fa-solid fa-envelope"></i></button>
+                </form>
+                <div class="footer-right-header mt-5">
+                    Mạng xã hội
+                </div>
+                <div class="footer-info-icon d-flex align-items-end mt-3">
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/facebook.webp"
+                            alt="facebook"></a>
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/zalo.webp" alt="zalo"></a>
+                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/tiktok.webp" alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-btn btn" id="scroll">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
