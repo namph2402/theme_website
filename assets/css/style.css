@@ -40,7 +40,7 @@ header {
 }
 
 .header-form button svg {
-	color: #e2e2e2;
+	color: #ffffff;
 	width: 2rem;
 	height: 2rem;
 	font-size: 3rem;
@@ -91,14 +91,14 @@ header {
 }
 
 .menu-category svg {
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	font-weight: 500;
 	color: #41aea7;
 	margin-right: 1rem;
 }
 
 .menu-category span {
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	font-weight: 500;
 	color: #41aea7;
 }
@@ -112,7 +112,7 @@ header {
 	display: flex;
 	align-items: center;
 	height: 100%;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	color: white;
 }
 
@@ -444,7 +444,7 @@ header {
 }
 
 .post-item-auth {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	margin: 0.5rem 0;
 	color: #946262;
 	display: flex;
@@ -521,7 +521,7 @@ footer {
 
 .footer-right-header {
 	color: white;
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	font-weight: bold;
 }
 
@@ -531,7 +531,7 @@ footer {
 }
 
 .scroll-btn {
-		position: fixed;
+	position: fixed;
 	bottom: 3rem;
 	right: 3rem;
 	z-index: 9999;
@@ -540,6 +540,7 @@ footer {
 	height: 5rem;
 	border-radius: 50%;
 	color: white;
+	display: none;
 	background: var(--primary-color);
 	animation: hien_dan_len linear 0.5s;
 }
@@ -670,7 +671,7 @@ footer {
 }
 
 .product-detail-sku {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	color: var(--primary-color);
 }
 
@@ -697,7 +698,7 @@ footer {
 .product-detail-price-old {
 	text-decoration: line-through;
 	color: #999;
-	margin-left: 1rem;
+	margin-left: 1.5rem;
 	font-size: 1.5rem;
 }
 
@@ -708,7 +709,7 @@ footer {
 	height: 2.4rem;
 	font-size: 1.3rem;
 	color: red;
-	margin-left: 1rem;
+	margin-left: 1.5rem;
 	border-radius: 1rem;
 }
 
@@ -736,9 +737,11 @@ footer {
 	font-size: 1.6rem;
 	color: var(--primary-color);
 	border: none;
-	width: 8rem;
+	width: 5rem;
 	border-bottom: 1px solid #eee;
 	text-align: center;
+	outline: none;
+	background: none;
 }
 
 .product-detail-summary span{
@@ -805,7 +808,7 @@ footer {
 
 .review-name {
 	display: block;
-	font-size: 1.7rem;
+	font-size: 1.8rem;
 	font-weight: bold;
 	color: var(--primary-color);
 }
@@ -816,7 +819,7 @@ footer {
 }
 
 .review-content {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	color: #583636;
 }
 
@@ -860,4 +863,51 @@ footer {
 	max-height: 18rem;
 	scrollbar-color: #b98f8f transparent;
 	scrollbar-width: thin;
+}
+
+/* Cart */
+.cart-table {
+	font-size: 1.6rem;
+}
+
+.cart-table thead tr th {
+	color: var(--primary-color);
+	font-size: 1.7rem;
+}
+
+.cart-table tbody tr td {
+	color: #583636;
+}
+
+.cart-img {
+	width: 7rem;
+	height: 7rem;
+	border-radius: 3px;
+}
+
+.cart-delete {
+	color: red;
+	font-size: 2.5rem;
+}
+
+.cart-delete:hover {
+	color: hsl(0, 100%, 70%);
+}
+
+.cart-checkout {
+	color: var(--primary-color);
+	font-size: 1.9rem;
+}
+
+.cart-btn {
+	font-size: 1.5rem;
+}
+
+.cart-empty {
+	font-size: 2rem;
+	color: var(--primary-color);
+}
+
+.cart-empty-img {
+	width: 20rem;
 }
