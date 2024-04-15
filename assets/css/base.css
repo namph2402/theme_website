@@ -1,7 +1,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --text-color: #a74e4a;
     --border-color: #dbdbdb;
     --primary-color: #884e4a;
     --icon-color: #884e4a;
@@ -20,6 +20,24 @@ html {
 .mb-6 {
 	margin-bottom: 6rem !important;
 }
+
+input[type="checkbox"] {
+	appearance: none;
+	position: relative;
+	height: 1rem;
+	width: 1rem;
+	background: rgb(255, 255, 255);
+	border-radius: 3px;
+	border: 1px solid #f1baba;
+}
+
+input[type="checkbox"]:checked {
+	background-image:url('/assets/img/tick.webp');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 
 .btn-primary {
 	padding: 10px 15px;
@@ -65,4 +83,14 @@ html {
 
 .flex-1 {
 	flex: 1 !important;
+}
+
+@keyframes lon_dan_len {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
