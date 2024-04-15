@@ -1,3 +1,4 @@
+$('#inputSearch').placeholderTypewriter({text: document.getElementById("inputSearch").getAttribute("data-placeholder").split(';')});
 
 function promotion(countDownDate) {
     var date = new Date(countDownDate).getTime();
