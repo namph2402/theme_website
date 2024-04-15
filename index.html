@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body onload='promotion("2025-02-24 00:00:00")'>
+<body>
+  <div id="toast">
+  </div>
+
   <header>
     <a class="col-3 header-logo h-100 px-4" href="">
       <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo.png?1710827597851" alt="" height="45">
@@ -500,7 +503,7 @@
     </div>
   </section>
 
-  <section class="promotion px-3 py-4 mb-6">
+  <section class="promotion px-3 py-4 mb-6" onload='promotion("2025-02-24 00:00:00")'>
     <div class="promotion-body w-100 px-3 py-4">
       <div class="col-6 d-flex">
         <div>
@@ -958,8 +961,9 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/fontawesome/js/all.min.js"></script>
-  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
   <script src="assets/js/placeholder.js"></script>
+  <script src="assets/js/base.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
