@@ -1,7 +1,7 @@
 :root {
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #a74e4a;
+    --text-color: #c7726e;
     --border-color: #dbdbdb;
     --primary-color: #884e4a;
     --icon-color: #884e4a;
@@ -28,7 +28,14 @@ input[type="checkbox"] {
 	width: 1rem;
 	background: rgb(255, 255, 255);
 	border-radius: 3px;
+	padding: 0.8rem;
 	border: 1px solid #f1baba;
+}
+
+input[type="checkbox"] + label {
+	margin-left: 1rem;
+	color: var(--primary-color);
+	font-size: 1.5rem;
 }
 
 input[type="checkbox"]:checked {
@@ -38,6 +45,28 @@ input[type="checkbox"]:checked {
 	background-size: cover;
 }
 
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	display: flex;
+	font-size: 1.5rem;
+	position: relative;
+	align-items: center;
+	margin-right: 1rem;
+	padding: 0.2rem 2rem;
+	border: 1px solid #999;
+	color: var(--text-color);
+	cursor: pointer;
+	border-radius: 2rem;
+}
+
+input[type="radio"]:checked + label {
+	color: white;
+	border: 1px solid rgb(180, 127, 127);
+	background: var(--primary-color);
+}
 
 .btn-primary {
 	padding: 10px 15px;
@@ -45,7 +74,7 @@ input[type="checkbox"]:checked {
 	color: var(--primary-color);
 	min-width: 100px;
 	border: none;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	background: #eee;
 	margin-left: 5px;
 }
@@ -92,6 +121,16 @@ input[type="checkbox"]:checked {
 
     to {
         transform: scale(1);
+    }
+}
+
+@keyframes hien_dan_len {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

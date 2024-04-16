@@ -259,14 +259,14 @@ header {
 }
 
 .menu-category svg {
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 	font-weight: 500;
 	color: #41aea7;
 	margin-right: 1rem;
 }
 
 .menu-category span {
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 	font-weight: 500;
 	color: #41aea7;
 }
@@ -280,7 +280,7 @@ header {
 	display: flex;
 	align-items: center;
 	height: 100%;
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 	color: white;
 }
 
@@ -626,7 +626,7 @@ header {
 }
 
 .post-item-sumary {
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	line-height: 2rem;
 	color: #7a7a7a;
 	height: 6rem;
@@ -708,14 +708,10 @@ footer {
 	animation: hien_dan_len linear 0.5s;
 }
 
-@keyframes hien_dan_len {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+/* scroll */
+.scroll-btn svg {
+	margin-top: 3px;
+	font-size: 1.7rem;
 }
 
 .scroll-btn:hover {
@@ -737,16 +733,6 @@ footer {
 	text-transform: uppercase;
 	color: var(--primary-color);
 	font-size: 1.6rem;
-}
-
-.checkbox-input {
-	padding: 0.8rem;
-}
-
-.checkbox-lable {
-	margin-left: 1rem;
-	color: var(--primary-color);
-	font-size: 1.5rem;
 }
 
 /* arrange */
@@ -834,7 +820,7 @@ footer {
 }
 
 .product-detail-sku {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	color: var(--primary-color);
 }
 
@@ -846,7 +832,6 @@ footer {
 }
 
 .product-detail-price {
-	margin-top: 2rem;
 	display: flex;
 	align-items: center;
 }
@@ -908,7 +893,8 @@ footer {
 }
 
 .product-detail-summary span{
-	font-size: 1.5rem;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
 	color: var(--primary-color);
 }
 
@@ -936,12 +922,20 @@ footer {
 	display: block;
 	margin-top: 2rem;
 	color: #884e4a;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 }
 
 .product-detail-content p img {
 	display: block;
 	margin: auto;
+}
+
+.product-detail-error {
+	position: absolute;
+	font-size: 1.4rem;
+	color: red;
+	top: -3rem;
+    left: 1rem;
 }
 
 /* review */
@@ -982,7 +976,7 @@ footer {
 }
 
 .review-content {
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	color: var(--text-color);
 }
 
@@ -1089,5 +1083,35 @@ footer {
 
 .post-content {
 	color: var(--text-color);
-	font-size: 1.4rem;
+	font-size: 1.6rem;
+	line-height: 3rem;
+}
+
+/* Form */ 
+.form-title {
+	color: black;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+
+.form-text {
+	color: var(--text-color);
+	font-size: 1.6rem;
+}
+
+.form-text a {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+.form-label {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+
+.form-control {
+	padding: 10px;
+	font-size: 1.5rem;
+	outline: none;
 }
