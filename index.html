@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/reset.css">
@@ -169,10 +168,9 @@
           8</a></li>
     </ul>
     <div class="banner-slide h-100 mx-4">
-      <div id="carouselExampleControlsNoTouching" class="carousel slide carousel-fade h-100" data-bs-ride="carousel"
-        data-bs-touch="false">
+      <div id="banner" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-touch="false">
         <div class="carousel-inner h-100">
-          <div class="carousel-item active h-100" data-bs-interval="5000">
+          <div class="carousel-item active h-100" data-bs-interval="3000">
             <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/slider_1.jpg?1710827597851"
               class="d-block w-100 h-100" alt="...">
           </div>
@@ -181,24 +179,22 @@
               class="d-block w-100 h-100" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-          data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-          data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </div>
     <div class="banner-sub h-100">
-      <a class="d-block h-50" href="http://">
+      <a class="d-block text-center pb-2 h-50" href="http://">
         <img class="img-fluid h-100"
           src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/right_banner_1.jpg?1710827597851" alt="">
       </a>
-      <a class="d-block h-50" href="http://">
+      <a class="d-block text-center pt-2 h-50" href="http://">
         <img class="img-fluid h-100"
           src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/right_banner_2.jpg?1710827597851" alt="">
       </a>
@@ -280,15 +276,15 @@
     </div>
   </section>
 
-  <section class="mb-6 px-4">
+  <section class="mb-6 px-4 wow fadeIn">
     <div class="d-flex justify-content-between">
       <a href="#" class="title-main-header-title title-main">Danh mục nổi bật</a>
       <div class="d-flex" id="myTab" role="tablist">
         <button class="btn-primary nav-link active" id="one-tab" data-bs-toggle="tab" data-bs-target="#one-tab-pane"
           type="button" role="tab" aria-controls="one-tab-pane" aria-selected="true">1</button>
-        <button class="btn-primary nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane"
+        <button class="btn-primary ms-3 nav-link" id="two-tab" data-bs-toggle="tab" data-bs-target="#two-tab-pane"
           type="button" role="tab" aria-controls="two-tab-pane" aria-selected="false">2</button>
-        <button class="btn-primary nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane"
+        <button class="btn-primary ms-3 nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three-tab-pane"
           type="button" role="tab" aria-controls="three-tab-pane" aria-selected="false">3</button>
       </div>
     </div>
@@ -957,8 +953,7 @@
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
   <script src="assets/fontawesome/js/all.min.js"></script>
   <script src="assets/bootstrap/bootstrap.min.js"></script>
   <script src="assets/js/placeholder.js"></script>

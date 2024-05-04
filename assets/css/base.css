@@ -1,21 +1,32 @@
 :root {
-    --white-color: #fff;
-    --black-color: #000;
-    --text-color: #c7726e;
-    --border-color: #dbdbdb;
-    --primary-color: #884e4a;
-    --icon-color: #884e4a;
+	--text-color: #9b4e4a;
+	--border-color: #dbdbdb;
+	--primary-color: #884e4a;
+	--icon-color: #884e4a;
 }
 
 * {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    box-sizing: border-box;
+	font-size: 62.5%;
+	line-height: 1.6rem;
+	box-sizing: border-box;
+	-moz-user-select: none !important;
+	-webkit-touch-callout: none !important;
+	-webkit-user-select: none !important;
+	-khtml-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
 }
+
+.my-6 {
+	margin-bottom: 6rem !important;
+	margin-top: 6rem !important;
+}
+
 
 .mb-6 {
 	margin-bottom: 6rem !important;
@@ -32,14 +43,14 @@ input[type="checkbox"] {
 	border: 1px solid #f1baba;
 }
 
-input[type="checkbox"] + label {
+input[type="checkbox"]+label {
 	margin-left: 1rem;
 	color: var(--primary-color);
 	font-size: 1.5rem;
 }
 
 input[type="checkbox"]:checked {
-	background-image:url('/assets/img/tick.webp');
+	background-image: url('/assets/img/tick.webp');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -49,7 +60,7 @@ input[type="radio"] {
 	display: none;
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
 	display: flex;
 	font-size: 1.5rem;
 	position: relative;
@@ -62,10 +73,34 @@ input[type="radio"] + label {
 	border-radius: 2rem;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
 	color: white;
 	border: 1px solid rgb(180, 127, 127);
 	background: var(--primary-color);
+}
+
+input[type="file"] {
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+input[type="file"]+label {
+	font-size: 15px;
+	color: white;
+	background-color: var(--primary-color);
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+input[type="file"]:focus+label,
+input[type="file"]+label:hover {
+	color: white;
+	background-color: var(--text-color);
 }
 
 .btn-primary {
@@ -76,11 +111,10 @@ input[type="radio"]:checked + label {
 	border: none;
 	font-size: 1.6rem;
 	background: #eee;
-	margin-left: 5px;
 }
 
 .btn-primary:hover {
-    color: white;
+	color: white;
 	background: #af6964;
 }
 
@@ -115,23 +149,23 @@ input[type="radio"]:checked + label {
 }
 
 @keyframes lon_dan_len {
-    from {
-        transform: scale(0);
-    }
+	from {
+		transform: scale(0);
+	}
 
-    to {
-        transform: scale(1);
-    }
+	to {
+		transform: scale(1);
+	}
 }
 
 @keyframes hien_dan_len {
-    from {
-        opacity: 0;
-    }
+	from {
+		opacity: 0;
+	}
 
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes slideInLeft {

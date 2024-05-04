@@ -152,10 +152,10 @@
   <section class="mb-6 px-4">
     <div class="row mt-5">
       <div class="text-center mb-5">
-        <span class="d-block form-title mb-2">Đăng nhập tài khoản</span>
-        <span class="form-text">Bạn chưa có tài khoản ? <a href="http://">Đăng ký tại đây</a></span>
+        <span class="d-block form-title mb-2">Đăng ký tài khoản</span>
+        <span class="form-text">Bạn đã có tài khoản ? <a href="http://">Đăng nhập tại đây</a></span>
       </div>
-      <div class="col-5 m-auto">
+      <form class="col-5 m-auto">
         <div class="mb-4">
           <label for="email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
@@ -164,9 +164,12 @@
           <label for="password" class="form-label">Mật khẩu</label>
           <input type="password" class="form-control" id="password">
         </div>
-        <a class="forgot-password mt-1" href="http://">Quên mật khẩu ?</a>
-        <button type="submit" class="btn btn-primary mt-5 w-100" onclick="showErrorToast()">Đăng nhập</button>
-      </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Nhập lại mật khẩu</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-primary mt-5 w-100">Đăng ký</button>
+      </form>
     </div>
   </section>
 

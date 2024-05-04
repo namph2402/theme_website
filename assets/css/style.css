@@ -143,7 +143,7 @@ header {
 .cart-product-name {
 	color: var(--primary-color);
 	text-transform: uppercase;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	line-height: 2.2rem;
 }
 
@@ -163,6 +163,7 @@ header {
 
 .cart-total {
 	font-size: 1.5rem;
+	color: var(--text-color);
 }
 
 .cart-total-price {
@@ -737,9 +738,6 @@ footer {
 
 /* arrange */
 .arrange {
-	height: 8.3rem;
-	padding-bottom: 2rem;
-	margin-bottom: 1rem;
 	border-bottom: 1px solid #eee;
 }
 
@@ -1046,6 +1044,7 @@ footer {
 	color: var(--primary-color);
 	font-size: 2rem;
 	transition-duration: 0.5s;
+	cursor: pointer;
 }
 
 .cart-delete:hover {
@@ -1114,4 +1113,41 @@ footer {
 	padding: 10px;
 	font-size: 1.5rem;
 	outline: none;
+	color: #6b4949;
+}
+
+.forgot-password {
+	color: var(--text-color);
+	font-size: 1.4rem;
+	display: block;
+}
+
+.promotion-banner {
+	height: 30rem;
+}
+
+/* User */
+.link-user a {
+	padding: 1rem 2rem;
+	font-size: 1.6rem;
+	color: var(--text-color);
+	border-bottom: 1px solid #eee;
+}
+
+.link-user a:hover {
+	background: #cf857f;
+	color: white;
+}
+
+.link-user a.active {
+	background: #b95e58;
+	color: white;
+}
+
+.user-avt {
+	border: 1px solid #eebcbc;
+	border-radius: 50%;
+	height: 20rem;
+	width: 20rem;
+	overflow: hidden;
 }

@@ -40,17 +40,17 @@ function promotion(countDownDate) {
     }, 1000);
 }
 
+// Disable enter submit
+$(document).on("keypress", "form", function (event) {
+    return event.keyCode != 13;
+});
+
 // Toast
 function showErrorToast() {
-    toast({
-        title: "Thất bại!",
-        message: "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.",
-        type: "error",
-        duration: 5000
-    });
+    toast("Thất bại!","Có lỗi xảy ra, vui lòng liên hệ quản trị viên.","error",3000);
 }
 
-function toast({ title, message, type, duration = 5000 }) {
+function toast(title, message, type, duration = 5000) {
     const main = document.getElementById("toast");
     if (main) {
         const toast = document.createElement("div");
