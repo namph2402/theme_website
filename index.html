@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/base.css">
@@ -25,20 +24,33 @@
       <form class="header-form d-flex" action="/" method="GET">
         <input type="text" name="search" id="inputSearch"
           data-placeholder="Tìm theo danh mục ...;Tìm theo mã sản phẩm ...;Tìm kiếm sản phẩm ...">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+        </button>
       </form>
     </div>
 
     <div class="col-5 d-flex justify-content-end align-items-center px-4">
       <div class="header-phone d-flex align-items-center">
-        <i class="fa-solid fa-phone-volume header-icon"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-telephone-fill header-icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
         <div class="header-text">
           <span class="d-block">Liên hệ hỗ trợ</span>
           <span class="header-text-info">(035) 664 5052</span>
         </div>
       </div>
       <div class="d-flex align-items-center px-4">
-        <i class="fa-solid fa-user header-icon"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-person-fill header-icon" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg>
         <a href="#" class="header-text">
           <span class="d-block">Tài khoản</span>
           <span class="header-text-info">Đăng nhập</span>
@@ -46,7 +58,11 @@
       </div>
       <div class="header-cart">
         <a class="header-cart-link d-flex align-items-center p-2" href="cart.html">
-          <i class="fa-solid fa-cart-shopping header-icon"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-cart4 header-icon" viewBox="0 0 16 16">
+            <path
+              d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+          </svg>
           <div class="header-text">
             <span class="header-text-info">Giỏ hàng</span>
           </div>
@@ -57,7 +73,7 @@
           </div> -->
           <ul class="cart-list border-bottom pe-4">
 
-            <li class="cart-item d-flex">
+            <li class="cart-item d-flex align-items-center">
               <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
               <div class="mx-3">
                 <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
@@ -66,10 +82,12 @@
                   <p>x1</p>
                 </div>
               </div>
-              <i class="fa-solid fa-xmark cart-delete p-2"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg cart-delete" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
             </li>
 
-            <li class="cart-item d-flex">
+            <li class="cart-item d-flex align-items-center">
               <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
               <div class="mx-3">
                 <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
@@ -78,10 +96,12 @@
                   <p>x1</p>
                 </div>
               </div>
-              <i class="fa-solid fa-xmark cart-delete p-2"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg cart-delete" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
             </li>
 
-            <li class="cart-item d-flex">
+            <li class="cart-item d-flex align-items-center">
               <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
               <div class="mx-3">
                 <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
@@ -90,31 +110,9 @@
                   <p>x1</p>
                 </div>
               </div>
-              <i class="fa-solid fa-xmark cart-delete p-2"></i>
-            </li>
-
-            <li class="cart-item d-flex">
-              <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
-              <div class="mx-3">
-                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
-                <div class="cart-price mt-1">
-                  <span>199.000đ</span>
-                  <p>x1</p>
-                </div>
-              </div>
-              <i class="fa-solid fa-xmark cart-delete p-2"></i>
-            </li>
-
-            <li class="cart-item d-flex">
-              <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
-              <div class="mx-3">
-                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
-                <div class="cart-price mt-1">
-                  <span>199.000đ</span>
-                  <p>x1</p>
-                </div>
-              </div>
-              <i class="fa-solid fa-xmark cart-delete p-2"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg cart-delete" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
             </li>
 
           </ul>
@@ -131,7 +129,11 @@
   <section class="menu">
     <div class="d-flex px-4">
       <div class="menu-category d-flex align-items-center">
-        <i class="fa-solid fa-list"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+        </svg>
         <span>Danh mục sản phẩm</span>
       </div>
       <ul class="menu-list d-flex align-items-center">
@@ -310,7 +312,11 @@
             </div>
             <div class="product-rating">
               <span class="product-rating-value">
-                <small class="text-primary fas fa-star"></small>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
                 <p class="product-rating-number">3</p>
               </span>
             </div>
@@ -452,7 +458,13 @@
           </a>
         </div>
         <div class="d-flex mt-4">
-          <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+          <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </button>
         </div>
       </div>
       <div class="row tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
@@ -472,7 +484,13 @@
           </a>
         </div>
         <div class="d-flex mt-4">
-          <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+          <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </button>
         </div>
       </div>
       <div class="row tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
@@ -492,7 +510,13 @@
           </a>
         </div>
         <div class="d-flex mt-4">
-          <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+          <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -600,7 +624,13 @@
         </div>
       </div>
       <div class="mt-4 d-flex mb-2">
-        <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -638,7 +668,11 @@
           </div>
           <div class="product-rating">
             <span class="product-rating-value">
-              <small class="text-primary fas fa-star"></small>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
               <p class="product-rating-number">3</p>
             </span>
           </div>
@@ -780,7 +814,13 @@
         </a>
       </div>
       <div class="d-flex mt-4">
-        <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -870,8 +910,14 @@
         </a>
       </div>
     </div>
-    <div class="mt-4 d-flex">
-      <button class="btn-primary m-auto">Xem thêm <i class="fa-solid fa-angle-right"></i></button>
+    <div class="mt-5 d-flex">
+      <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+        </svg>
+      </button>
     </div>
   </section>
 
@@ -883,10 +929,28 @@
       <div class="footer-info mt-4">
         <span class="footer-info-text">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn Quốc</span>
         <div class="footer-info-profile mt-4">
-          <span class="d-block"><i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy,
-            Hà Nội</span>
-          <span class="d-block"><i class="fa-solid fa-mobile-screen-button"></i>Số điện thoại: 0985.321.272</span>
-          <span class="d-block"><i class="fa-solid fa-envelope"></i>Email: blackrouge.com.vn@gmail.com</span>
+          <span class="d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+            </svg>
+            Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy, Hà Nội
+          </span>
+          <span class="d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone"
+              viewBox="0 0 16 16">
+              <path
+                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+            </svg>
+            Số điện thoại: 0985.321.272</span>
+          <span class="d-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+            Email: blackrouge.com.vn@gmail.com</span>
         </div>
       </div>
     </div>
@@ -935,7 +999,13 @@
         </div>
         <form class="header-form d-flex mt-3" action="" method="POST">
           <input type="text" placeholder="Nhập email đăng ký">
-          <button><i class="fa-solid fa-envelope"></i></button>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+          </button>
         </form>
         <div class="footer-right-header mt-5">
           Mạng xã hội
@@ -950,11 +1020,14 @@
   </footer>
 
   <button class="btn scroll-btn hide" id="scroll">
-    <i class="fa-solid fa-chevron-up"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+    </svg>
   </button>
 
   <script src="assets/js/jquery.js"></script>
-  <script src="assets/fontawesome/js/all.min.js"></script>
   <script src="assets/bootstrap/bootstrap.min.js"></script>
   <script src="assets/js/placeholder.js"></script>
   <script src="assets/js/base.js"></script>

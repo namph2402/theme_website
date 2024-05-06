@@ -103,6 +103,12 @@ input[type="file"]+label:hover {
 	background-color: var(--text-color);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .btn-primary {
 	padding: 10px 15px;
 	border-radius: 2rem;
@@ -111,6 +117,7 @@ input[type="file"]+label:hover {
 	border: none;
 	font-size: 1.6rem;
 	background: #eee;
+    line-height: 2rem;
 }
 
 .btn-primary:hover {

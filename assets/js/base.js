@@ -1,15 +1,11 @@
 // Placeholder
-$('#inputSearch').placeholderTypewriter({
-    text: document.getElementById("inputSearch").getAttribute("data-placeholder").split(';') 
-});
+// $('#inputSearch').placeholderTypewriter({
+//     text: document.getElementById("inputSearch").getAttribute("data-placeholder").split(';') 
+// });
 
 // Scroll
 $(window).scroll(function () {
-    if ($(window).scrollTop() >= 500) {
-        $('#scroll').show();
-    } else {
-        $('#scroll').hide();
-    }
+    $(window).scrollTop() >= 500 ? $('#scroll').show() : $('#scroll').hide();
 });
 document.getElementById('scroll').addEventListener('click', () => {
     window.scrollTo({
@@ -45,9 +41,23 @@ $(document).on("keypress", "form", function (event) {
     return event.keyCode != 13;
 });
 
+// Quantity
+$('.product-detail-quantity a').on('click', function () {
+    var a = $(this);
+    var oldValue = a.parent().parent().find('input').val();
+
+    if (a.hasClass('btn-plus')) {
+        var newVal = parseFloat(oldValue) + 1;
+    } else {
+        var newVal = oldValue > 1 ? parseFloat(oldValue) - 1 : 1;
+    }
+    a.parent().parent().find('input').val(newVal);
+    onDetailChange();
+});
+
 // Toast
 function showErrorToast() {
-    toast("Thất bại!","Có lỗi xảy ra, vui lòng liên hệ quản trị viên.","error",3000);
+    toast("Thất bại!", "Có lỗi xảy ra, vui lòng liên hệ quản trị viên.", "error", 3000);
 }
 
 function toast(title, message, type, duration = 5000) {
