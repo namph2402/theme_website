@@ -1,42 +1,37 @@
 :root {
+	--text-color: #9b4e4a;
 	--border-color: #dbdbdb;
-	--text-color: #884e4a;
-	--color-white: #fff;
-	--color-black: #000000;
 	--primary-color: #884e4a;
 	--icon-color: #884e4a;
-	--header-color: #41aea7;
+}
+
+* {
+	box-sizing: inherit;
 }
 
 html {
 	font-size: 62.5%;
 	line-height: 1.6rem;
 	box-sizing: border-box;
-	user-select: none !important;
+	-moz-user-select: none !important;
+	-webkit-touch-callout: none !important;
+	-webkit-user-select: none !important;
+	-khtml-user-select: none !important;
 	-moz-user-select: none !important;
 	-ms-user-select: none !important;
+	user-select: none !important;
 }
 
-.text-primary {
-	color: var(--primary-color) !important;
+.my-6 {
+	margin-bottom: 6rem !important;
+	margin-top: 6rem !important;
 }
 
-.text-white {
-	color: var(--color-white);
+
+.mb-6 {
+	margin-bottom: 6rem !important;
 }
 
-.text-black {
-	color: var(--color-black);
-}
-
-.bg-white {
-	background: var(--color-white);
-}
-
-.bg-light {
-    --bs-bg-opacity: 1;
-    background-color: rgba(248, 249, 250, var(--bs-bg-opacity)) !important
-}
 
 .btn-primary {
 	padding: 10px 15px;
@@ -58,6 +53,30 @@ html {
 	cursor: default;
 	color: white;
 	background: var(--primary-color);
+}
+
+.w-5 {
+	width: 5% !important;
+}
+
+.w-10 {
+	width: 10% !important;
+}
+
+.w-15 {
+	width: 15% !important;
+}
+
+.w-20 {
+	width: 20% !important;
+}
+
+.w-30 {
+	width: 30% !important;
+}
+
+.flex-1 {
+	flex: 1 !important;
 }
 
 @keyframes lon_dan_len {

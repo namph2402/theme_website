@@ -3,6 +3,11 @@
 //     text: document.getElementById("inputSearch").getAttribute("data-placeholder").split(';') 
 // });
 
+// Filter
+function filter() {
+    console.log(123);
+}
+
 // Scroll
 $(window).scroll(function () {
     $(window).scrollTop() >= 500 ? $('#scroll').show() : $('#scroll').hide();
@@ -16,6 +21,7 @@ document.getElementById('scroll').addEventListener('click', () => {
 
 // Promotion time
 function promotion(countDownDate) {
+    console.log(123);
     var date = new Date(countDownDate).getTime();
     var x = setInterval(function () {
         var distance = date - +new Date().getTime();
@@ -28,10 +34,10 @@ function promotion(countDownDate) {
             days = hours = minutes = seconds = 0;
         }
         document.getElementById('countdown').innerHTML =
-            `<div class="promotion-item"><span class="d-block promotion-number">` + days + `</span>Ngày</div>
-             <div class="promotion-item"><span class="d-block promotion-number">`+ hours + `</span>Giờ</div>
-             <div class="promotion-item"><span class="d-block promotion-number">`+ minutes + `</span>Phút</div>
-             <div class="promotion-item"><span class="d-block promotion-number">`+ seconds + `</span>Giây</div>
+            `<div class="promotion-item text-center me-4"><span class="d-block mt-2">` + days + `</span>Ngày</div>
+             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ hours + `</span>Giờ</div>
+             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ minutes + `</span>Phút</div>
+             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ seconds + `</span>Giây</div>
             `;
     }, 1000);
 }
