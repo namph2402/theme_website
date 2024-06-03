@@ -19,7 +19,7 @@
 <body>
     <div id="toast"></div>
     <!-- Header -->
-    <header class="bg-light py-3 fs-4">
+    <header class="py-3 fs-4">
         <div class="row container-xxl justify-content-center position-relative">
             <div
                 class="col-md-1 d-lg-none d-flex align-items-center position-absolute top-25 left-0 w-auto header-list-md">
@@ -194,7 +194,8 @@
     </section>
     <!-- Content -->
     <div class="container-lg">
-        <section class="row justify-content-between mb-6">
+        <!-- Voucher -->
+        <section class="row">
             <div class="col-12 col-sm-6 col-lg-3">
                 <div class="d-flex align-items-center px-2 bg-white coupon-item">
                     <div class="position-relative coupon-item-img">
@@ -284,8 +285,8 @@
                 </div>
             </div>
         </section>
-
-        <section class="mb-6 px-4">
+        <!-- Content product -->
+        <section class="px-4 my-6">
             <div class="row justify-content-between">
                 <div class="modal filter-modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel"
                     aria-hidden="true">
@@ -409,8 +410,7 @@
                                 data-bs-toggle="modal" data-bs-target="#filterModal">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-funnel-fill text-black" viewBox="0 0 16 16">
-                                    <path
-                                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
+                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
                                 </svg>
                                 <span>Lọc</span>
                             </button>
@@ -789,7 +789,7 @@
                             </a>
                         </div>
                     </div>
-
+                    <!-- Pagination -->
                     <div class="d-flex justify-content-center">
                         <ul class="d-flex pagination m-0">
                             <a class="d-flex justify-content-center align-items-center fs-5 pagination-link disabled">
@@ -821,8 +821,8 @@
                 </div>
             </div>
         </section>
-
-        <section class="mb-6 px-4">
+        <!-- View product -->
+        <section class="px-4 mb-6">
             <a href="#" class="d-block mb-3 text-uppercase text-primary fs-1 mb-4 fw-medium">Sản phẩm đã xem</a>
             <div class="row mt-5">
                 <div class="col-lg-3 col-sm-4 col-6 mb-5">

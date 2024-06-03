@@ -6,579 +6,961 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/base1.css">
-    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/576px.css">
+    <link rel="stylesheet" href="assets/bootstrap/768px.css">
+    <link rel="stylesheet" href="assets/bootstrap/992px.css">
+    <link rel="stylesheet" href="assets/bootstrap/1200px.css">
+    <link rel="stylesheet" href="assets/bootstrap/1400px.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div id="toast"></div>
 
-    <header>
-        <a class="col-3 header-logo h-100 px-4" href="">
-            <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo.png?1710827597851" alt=""
-                height="45">
-        </a>
-
-        <div class="col-4 header-search">
-            <form class="header-form d-flex" action="/" method="GET">
-                <input type="text" name="search" id="inputSearch"
-                    data-placeholder="Tìm theo danh mục ...;Tìm theo mã sản phẩm ...;Tìm kiếm sản phẩm ...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-
-        <div class="col-5 d-flex justify-content-end align-items-center px-4">
-            <div class="header-phone d-flex align-items-center">
-                <i class="fa-solid fa-phone-volume header-icon"></i>
-                <div class="header-text">
-                    <span class="d-block">Liên hệ hỗ trợ</span>
-                    <span class="header-text-info">(035) 664 5052</span>
-                </div>
+    <!-- Header -->
+    <header class="py-3 fs-4">
+        <div class="row container-xxl justify-content-center position-relative">
+            <div
+                class="col-md-1 d-lg-none d-flex align-items-center position-absolute top-25 left-0 w-auto header-list-md">
+                <button class="position-relative text-primary p-0" type="button" data-bs-toggle="modal"
+                    data-bs-target="#menuModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
             </div>
-            <div class="d-flex align-items-center px-4">
-                <i class="fa-solid fa-user header-icon"></i>
-                <a href="#" class="header-text">
-                    <span class="d-block">Tài khoản</span>
-                    <span class="header-text-info">Đăng nhập</span>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-6 d-flex align-items-center h-100">
+                <a href="#" class="d-flex justify-content-center w-100 h-100">
+                    <img src="https://lephunghieu.pizzahips.com/themes/custom/hips_resto/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="header-cart">
-                <a class="header-cart-link d-flex align-items-center p-2" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping header-icon"></i>
-                    <div class="header-text">
-                        <span class="header-text-info">Giỏ hàng</span>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12 d-flex align-items-center overflow-hidden header-center">
+                <form class="d-flex w-100 overflow-hidden" action="" method="get">
+                    <input class="h-100 flex-fill" type="text" name="search" id="inputSearch"
+                        placeholder="Tìm kiếm sản phẩm">
+                    <button class="h-100 px-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search text-primary" viewBox="0 0 15 15">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="col-xl-5 col-lg-4 d-none d-lg-flex align-items-center justify-content-end">
+                <a class="d-flex align-items-center ms-4" href="#">
+                    <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/phone_icon.png" width="32"
+                        height="32" class="me-3" alt="phone_icon">
+                    <div class="d-none d-xl-block text-primary fs-4">
+                        <span class="d-block">Hỗ trợ khách hàng</span>
+                        <span class="fw-bold">(035) 664 5052</span>
                     </div>
                 </a>
-                <div class="cart-group py-4 ps-4">
-                    <!-- <div class="w-100 text-center">
-                <span>Không có sản phẩm nào</span>
-              </div> -->
-                    <ul class="cart-list border-bottom pe-4">
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
+                <a class="d-flex align-items-center ms-4" href="#">
+                    <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/account_icon.png" width="32"
+                        height="32" class="me-3" alt="phone_icon">
+                    <div class="d-none d-xl-block text-primary fs-4">
+                        <span class="d-block">Tài khoản</span>
+                        <small class="text-primary header-right-text-user">Đăng nhập</small>
+                    </div>
+                </a>
+                <div class="d-flex align-items-center ms-4 position-relative text-primary fs-4 header-right-cart">
+                    <a class="d-flex align-items-center px-3 py-2" href="cart.html">
+                        <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="24"
+                            height="24" alt="cart_icon">
+                        <span class="p-2">Giỏ hàng</span>
+                        <span class="px-2 py-1 text-white header-right-cart-count">0</span>
+                    </a>
+                    <div class="d-none bg-white position-absolute right-0 py-4 fs-4 header-cart-group">
+                        <!-- <div class="w-100 text-center">
+                            <span>Không có sản phẩm nào</span>
+                        </div> -->
+                        <ul class="border-bottom pe-4 overflow-auto header-cart-list">
+                            <li class="d-flex align-items-center header-cart-item">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                                <div class="mx-3">
+                                    <a href="#"
+                                        class="d-block text-uppercase fs-4 text-primary header-cart-product-name">SON
+                                        BLACK ROUGE
+                                        AIR FIT VEL VET A09 (CAM ĐẤT)</a>
+                                    <div class="d-flex mt-1 fs-4">
+                                        <span class="fw-bold me-3">199.000đ</span>
+                                        <p>x1</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                    </ul>
-                    <div class="cart-total d-flex align-items-center pt-3">
-                        <span>Tổng tiền tạm tính:</span>
-                        <span class="cart-total-price d-block ms-2">199.999đ</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg text-primary header-cart-delete" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center pt-3 ps-3 fs-4 text-primary">
+                            <span>Tổng tiền tạm tính:</span>
+                            <span class="d-block ms-2 fw-bold fs-3">199.999đ</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div
+                class="col-md-1 d-lg-none d-flex align-items-center justify-content-end px-3 position-absolute top-25 right-0 w-auto header-cart-md">
+                <a class="d-flex align-items-center" href="cart.html">
+                    <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="25" height="25"
+                        alt="cart_icon">
+                </a>
+            </div>
         </div>
     </header>
-
-    <section class="menu">
-        <div class="d-flex px-4">
-            <div class="menu-category d-flex align-items-center">
-                <i class="fa-solid fa-list"></i>
-                <span>Danh mục sản phẩm</span>
+    <!-- Menu -->
+    <section class="d-lg-flex d-none justify-content-center py-3 nav-menu">
+        <div class="row container-lg">
+            <div class="col-12 d-flex">
+                <div class="d-flex align-items-center justify-content-center bg-white nav-menu-category">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list-ul me-3" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                    </svg>
+                    <span class="fw-medium fs-3">Danh mục sản phẩm</span>
+                </div>
+                <ul class="d-flex align-items-center justify-content-center nav-menu-list">
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Sản
+                            phẩm</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Tin
+                            tức</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Sản
+                            phẩm</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Tin
+                            tức</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="menu-list d-flex align-items-center">
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Trang chủ</a>
-                </li>
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Sản phẩm</a>
-                </li>
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Tin tức</a>
-                </li>
-            </ul>
         </div>
     </section>
-
-    <section class="my-6 px-4">
-        <div class="row mt-5 d-flex justify-content-between">
-            <div class="w-20">
-                <div class="border-end me-4">
-                    <div class="filter-item mb-4">
-                        <span class="filter-title d-block pt-4 pb-2">Danh mục</span>
-                        <ul class="filter-list">
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">Giá dưới 100.000đ</label>
+    <!-- Modal menu -->
+    <section class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content d-flex flex-row-reverse content-menu">
+                <div class="modal-header w-10">
+                    <button type="button" class="btn-close text-primary" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body w-auto">
+                    <div class="menu-modal">
+                        <ul class="p-0">
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
                             </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">100.000đ - 200.000đ</label>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
                             </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">200.000đ - 300.000đ</label>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
                             </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">300.000đ - 500.000đ</label>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
                             </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">500.000đ - 1.000.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">Giá trên 1.000.000đ</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="filter-item mb-4">
-                        <span class="filter-title d-block pt-4 pb-2">Tag gán</span>
-                        <ul class="filter-list">
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">Giá dưới 100.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">100.000đ - 200.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">200.000đ - 300.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">300.000đ - 500.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">500.000đ - 1.000.000đ</label>
-                            </li>
-                            <li class="d-flex align-items-center mb-3">
-                                <input class="checkbox-input" type="checkbox">
-                                <label class="checkbox-lable" for="cssc">Giá trên 1.000.000đ</label>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="flex-1">
-                <div class="arrange mb-4 pb-2">
-                    <h1 class="title-main-header-title d-block mb-3">Tin tức</h1>
-                    <div class="arrange-list d-flex">
-                        <span class="arrange-text">Sắp xếp:</span>
-                        <ul class="d-flex align-items-center arrange-link">
-                            <a class="px-3 pb-3" href="">Tên A -> Z</a>
-                            <a class="px-3 pb-3" href="">Tên Z -> A</a>
+        </div>
+    </section>
+    <!-- Content -->
+    <div class="container-lg">
+        <!-- Content post -->
+        <section class="px-4 my-6">
+            <div class="row justify-content-between">
+                <div class="modal filter-modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content d-flex flex-row-reverse w-50 ms-auto ps-3">
+                            <div class="modal-header w-10">
+                                <button type="button" class="btn-close text-primary" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="filter-content flex-fill">
+                                <div class="filter-item mb-4">
+                                    <span class="d-block pt-2 pb-2 text-uppercase fs-4 text-primary">Mức giá</span>
+                                    <ul class="p-0 filter-list">
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price1" type="checkbox">
+                                            <label for="price1">Giá dưới 100.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price2" type="checkbox">
+                                            <label for="price2">100.000đ - 200.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price3" type="checkbox">
+                                            <label for="price3">200.000đ - 300.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price4" type="checkbox">
+                                            <label for="price4">300.000đ - 500.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price5" type="checkbox">
+                                            <label for="price5">500.000đ - 1.000.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="price6" type="checkbox">
+                                            <label for="price6">Giá trên 1.000.000đ</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-item mb-4">
+                                    <span class="d-block pt-2 pb-2 fs-4 text-primary text-uppercase">Kích thước</span>
+                                    <ul class="p-0 filter-list">
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size1" type="checkbox">
+                                            <label for="size1">Giá dưới 100.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size2" type="checkbox">
+                                            <label for="size2">100.000đ - 200.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size3" type="checkbox">
+                                            <label for="size3">200.000đ - 300.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size4" type="checkbox">
+                                            <label for="size4">300.000đ - 500.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size5" type="checkbox">
+                                            <label for="size5">500.000đ - 1.000.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="size6" type="checkbox">
+                                            <label for="size6">Giá trên 1.000.000đ</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-item mb-4">
+                                    <span class="d-block pt-2 pb-2 fs-4 text-primary text-uppercase">Màu sắc</span>
+                                    <ul class="p-0 filter-list">
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color1" type="checkbox">
+                                            <label for="color1">Giá dưới 100.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color2" type="checkbox">
+                                            <label for="color2">100.000đ - 200.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color3" type="checkbox">
+                                            <label for="color3">200.000đ - 300.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color4" type="checkbox">
+                                            <label for="color4">300.000đ - 500.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color5" type="checkbox">
+                                            <label for="color5">500.000đ - 1.000.000đ</label>
+                                        </li>
+                                        <li class="d-flex align-items-center mb-3">
+                                            <input id="color6" type="checkbox">
+                                            <label for="color6">Giá trên 1.000.000đ</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-fill">
+                    <div class="border-bottom mb-4 pb-2">
+                        <h1 class="d-block mb-3 text-uppercase text-primary fs-1 mb-4 fw-medium">Tin tức</h1>
+                        <div class="d-flex pb-3">
+                            <div class="d-flex align-items-center">
+                                <span class="text-primary pe-2 fs-4 fw-medium">Sắp xếp:</span>
+                                <div class="position-relative arrange">
+                                    <span class="d-block d-md-none m-auto fs-4 fw-medium text-primary">Thứ tự:</span>
+                                    <ul class="d-none d-md-flex align-items-center fs-4 ps-0 m-0 arrange-list">
+                                        <a class="px-3 fw-normal arrange-link active" href="">Tên A -> Z</a>
+                                        <a class="px-3 fw-normal arrange-link" href="">Tên Z -> A</a>
+                                        <a class="px-3 fw-normal arrange-link" href="">Giá tăng dần</a>
+                                        <a class="px-3 fw-normal arrange-link" href="">Giá giảm dần</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button
+                                class="d-flex d-xl-none ms-auto fs-4 align-items-center justify-content-center text-primary"
+                                data-bs-toggle="modal" data-bs-target="#filterModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-funnel-fill text-black" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
+                                </svg>
+                                <span>Lọc</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-6 mb-5">
+                            <a href="http://" class="d-block post-item">
+                                <div class="d-flex justify-content-center post-img">
+                                    <img class="w-100"
+                                        src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
+                                        alt="">
+                                </div>
+                                <div class="py-2 px-4">
+                                    <span class="fs-4 overflow-hidden text-primary post-item-name">Top 10 thỏi son môi
+                                        màu hồng đất đẹp xuất
+                                        sắc 2024 a a a a a a a a a a a
+                                        a a
+                                        a
+                                        a a a a a</span>
+                                    <div class="d-flex justify-content-between my-2 fs-5 post-item-auth">
+                                        <span>Admin</span>
+                                        <span>24/02/2000</span>
+                                    </div>
+                                    <div class="fs-4 overflow-hidden post-item-sumary">
+                                        <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
+                                            nhưng những thỏi son
+                                            môi
+                                            màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+                                            a a a a a a a a a a</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-center">
+                        <ul class="d-flex pagination m-0">
+                            <a class="d-flex justify-content-center align-items-center fs-5 pagination-link disabled">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </a>
+                            <a
+                                class="d-flex justify-content-center align-items-center fs-5 pagination-link active">1</a>
+                            <a href=""
+                                class="d-flex justify-content-center align-items-center fs-5 pagination-link">2</a>
+                            <a href=""
+                                class="d-flex justify-content-center align-items-center fs-5 pagination-link">3</a>
+                            <span
+                                class="d-flex justify-content-center align-items-center fs-5 pagination-link dot">...</span>
+                            <a href=""
+                                class="d-flex justify-content-center align-items-center fs-5 pagination-link">10</a>
+                            <a href="" class="d-flex justify-content-center align-items-center fs-5 pagination-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
                         </ul>
                     </div>
                 </div>
-
-                <div class="row mt-5">
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
+            </div>
+        </section>
+        <!-- View post -->
+        <section class="px-4 mb-6">
+            <a href="#" class="d-block mb-3 text-uppercase text-primary fs-1 mb-4 fw-medium">Sản phẩm đã xem</a>
+            <div class="row mt-5">
+                <div class="col-lg-3 col-sm-4 col-6 mb-5">
+                    <a href="#" class="position-relative d-block overflow-hidden product-item">
+                        <div class="product-item-img w-100">
+                            <img class="w-100"
+                                src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                alt="">
+                        </div>
+                        <div class="py-2 px-3">
+                            <span class="pt-2 text-uppercase fs-4 text-primary overflow-hidden product-item-name">SON
+                                BLACK ROUGE AIR FIT VEL VET
+                                A09 (CAM ĐẤT)</span>
+                            <div class="d-flex product-price">
+                                <span class="fw-bold product-price-new"> 100.000đ</span>
+                                <span class="d-block ms-auto text-decoration-line-through product-price-old">
+                                    100.000đ</span>
                             </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc 2024 a a
-                                    a a a a a a a a a a a a
-                                    a a a a a</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
-                                        a a a a a a a a a a</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
-                            </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc
-                                    2024</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại...</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
-                            </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc
-                                    2024</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại...</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
-                            </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc 2024 a a
-                                    a a a a a a a a a a a a
-                                    a a a a a</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại... a a a a a a a a a a a a a a a a a a a a a a a a a a a a
-                                        a a a a a a a a a a</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
-                            </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc
-                                    2024</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại...</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-4 post-card">
-                        <a href="http://" class="post-item d-block">
-                            <div class="post-img d-flex justify-content-center">
-                                <img class="w-75"
-                                    src="https://bizweb.dktcdn.net/100/347/946/articles/top-10-thoi-son-moi-mau-hong-dat-dep-xuat-sac-2024.jpg?v=1710233361537"
-                                    alt="">
-                            </div>
-                            <div class="post-item-info">
-                                <span class="post-item-name">Top 10 thỏi son môi màu hồng đất đẹp xuất sắc
-                                    2024</span>
-                                <div class="post-item-auth">
-                                    <span>Admin</span>
-                                    <span>24/02/2000</span>
-                                </div>
-                                <div class="post-item-sumary">
-                                    <span>Không mang sắc màu rực rỡ như đỏ, cũng chẳng nổi bật và năng động như cam,
-                                        nhưng những thỏi son môi
-                                        màu hồng đất lại...</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center position-absolute product-value-promotion">
+                            <span>Hot</span>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
+                            <span
+                                class="d-flex align-items-center justify-content-center text-white product-rating-value">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <p class="fw-bold m-1 fs-4">3</p>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="d-flex justify-content-center mt-4">
-                    <ul class="d-flex pagination">
-                        <a class="d-flex justify-content-center align-items-center pagination-link disabled">
-                            <i class="fa-solid fa-angle-left"></i></a>
-                        <a class="d-flex justify-content-center align-items-center pagination-link active">1</a>
-                        <a href="" class="d-flex justify-content-center align-items-center pagination-link">2</a>
-                        <a href="" class="d-flex justify-content-center align-items-center pagination-link">3</a>
-                        <span class="d-flex justify-content-center align-items-center pagination-link dot">...</span>
-                        <a href="" class="d-flex justify-content-center align-items-center pagination-link">10</a>
-                        <a href="" class="d-flex justify-content-center align-items-center pagination-link">
-                            <i class="fa-solid fa-angle-right"></i></a>
-                    </ul>
+                <div class="col-lg-3 col-sm-4 col-6 mb-5">
+                    <a href="#" class="position-relative d-block overflow-hidden product-item">
+                        <div class="product-item-img w-100">
+                            <img class="w-100"
+                                src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                alt="">
+                        </div>
+                        <div class="py-2 px-3">
+                            <span class="pt-2 text-uppercase fs-4 text-primary overflow-hidden product-item-name">SON
+                                BLACK ROUGE AIR FIT VEL VET
+                                A09 (CAM ĐẤT)</span>
+                            <div class="d-flex product-price">
+                                <span class="fw-bold product-price-new"> 100.000đ</span>
+                                <span class="d-block ms-auto text-decoration-line-through product-price-old">
+                                    100.000đ</span>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center position-absolute product-value-promotion">
+                            <span>Hot</span>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
+                            <span
+                                class="d-flex align-items-center justify-content-center text-white product-rating-value">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <p class="fw-bold m-1 fs-4">3</p>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-6 mb-5">
+                    <a href="#" class="position-relative d-block overflow-hidden product-item">
+                        <div class="product-item-img w-100">
+                            <img class="w-100"
+                                src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                alt="">
+                        </div>
+                        <div class="py-2 px-3">
+                            <span class="pt-2 text-uppercase fs-4 text-primary overflow-hidden product-item-name">SON
+                                BLACK ROUGE AIR FIT VEL VET
+                                A09 (CAM ĐẤT)</span>
+                            <div class="d-flex product-price">
+                                <span class="fw-bold product-price-new"> 100.000đ</span>
+                                <span class="d-block ms-auto text-decoration-line-through product-price-old">
+                                    100.000đ</span>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center position-absolute product-value-promotion">
+                            <span>Hot</span>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
+                            <span
+                                class="d-flex align-items-center justify-content-center text-white product-rating-value">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <p class="fw-bold m-1 fs-4">3</p>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-6 mb-5">
+                    <a href="#" class="position-relative d-block overflow-hidden product-item">
+                        <div class="product-item-img w-100">
+                            <img class="w-100"
+                                src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                alt="">
+                        </div>
+                        <div class="py-2 px-3">
+                            <span class="pt-2 text-uppercase fs-4 text-primary overflow-hidden product-item-name">SON
+                                BLACK ROUGE AIR FIT VEL VET
+                                A09 (CAM ĐẤT)</span>
+                            <div class="d-flex product-price">
+                                <span class="fw-bold product-price-new"> 100.000đ</span>
+                                <span class="d-block ms-auto text-decoration-line-through product-price-old">
+                                    100.000đ</span>
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center position-absolute product-value-promotion">
+                            <span>Hot</span>
+                        </div>
+                        <div
+                            class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
+                            <span
+                                class="d-flex align-items-center justify-content-center text-white product-rating-value">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <p class="fw-bold m-1 fs-4">3</p>
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="mb-6 px-4">
-        <a href="#" class="title-main-header-title">Sản phẩm đã xem</a>
-        <div class="row mt-5">
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a a a
-                            a a a a a a
-                            a a a a</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                    <div class="product-value-promotion">
-                        <span>Hot</span>
-                    </div>
-                    <div class="product-rating">
-                        <span class="product-rating-value">
-                            <small class="text-primary fas fa-star"></small>
-                            <p class="product-rating-number">3</p>
-                        </span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="d-flex">
-        <div class="col-4 footer-left h-100" style="background: #41aea7;">
-            <div class="footer-logo">
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="d-block d-lg-flex text-white">
+        <div class="col-lg-4 col-12 py-5 px-4" style="background: #41aea7;">
+            <div>
                 <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo-footer.png?1710827597851"
                     alt="">
             </div>
-            <div class="footer-info mt-4">
-                <span class="footer-info-text">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn
-                    Quốc</span>
-                <div class="footer-info-profile mt-4">
-                    <span class="d-block"><i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa,
-                        Cầu Giấy,
-                        Hà Nội</span>
-                    <span class="d-block"><i class="fa-solid fa-mobile-screen-button"></i>Số điện thoại:
-                        0985.321.272</span>
-                    <span class="d-block"><i class="fa-solid fa-envelope"></i>Email: blackrouge.com.vn@gmail.com</span>
+            <div class="mt-4">
+                <span class="fs-4">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn Quốc</span>
+                <div class="mt-4 fs-4 footer-info-profile">
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy, Hà Nội
+                    </span>
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-phone me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        Số điện thoại: 0985.321.272</span>
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                        Email: blackrouge.com.vn@gmail.com</span>
                 </div>
             </div>
         </div>
-        <div class="col-8 footer-right h-100 d-flex" style="background: #47d0c7">
-            <div class="col-4 ps-5">
-                <div class="footer-right-header">
+        <div class="col-lg-8 col-12 d-flex flex-wrap py-5 px-4" style="background: #47d0c7">
+            <div class="col-lg-4 col-sm-3 col-6">
+                <div class="fw-bold text-white fs-3">
                     Liên kết nhanh
                 </div>
                 <ul>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Trang chủ</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Trang chủ</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Sản phẩm</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Sản phẩm</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Tin tức</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Tin tức</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Giới thiệu</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Giới thiệu</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <div class="footer-right-header">
+            <div class="col-lg-4 col-sm-4 col-6 mb-4">
+                <div class="fw-bold text-white fs-3">
                     Chính sách cửa hàng
                 </div>
                 <ul>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Trang chủ</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Trang chủ</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Sản phẩm</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Sản phẩm</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Tin tức</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Tin tức</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Giới thiệu</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Giới thiệu</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <div class="footer-right-header">
+            <div class="col-lg-4 col-sm-5 col-12">
+                <div class="fw-bold text-white fs-3">
                     Đăng ký nhận tin
                 </div>
-                <form class="header-form d-flex mt-3" action="" method="POST">
-                    <input type="text" placeholder="Nhập email đăng ký">
-                    <button><i class="fa-solid fa-envelope"></i></button>
+                <form class="d-flex mt-3 footer-form" action="" method="POST">
+                    <input class="px-4 fs-4 border-none" type="text" placeholder="Nhập email đăng ký">
+                    <button class="px-4 border-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                    </button>
                 </form>
-                <div class="footer-right-header mt-5">
+                <div class="fw-bold text-white fs-3 mt-4">
                     Mạng xã hội
                 </div>
-                <div class="footer-info-icon d-flex align-items-end mt-3">
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/facebook.webp"
+                <div class="d-flex align-items-end mt-3 footer-info-icon-link">
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/facebook.webp"
                             alt="facebook"></a>
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/zalo.webp" alt="zalo"></a>
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/tiktok.webp" alt="tiktok"></a>
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/zalo.webp"
+                            alt="zalo"></a>
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/tiktok.webp"
+                            alt="tiktok"></a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <button class="scroll-btn btn" id="scroll">
-        <i class="fa-solid fa-chevron-up"></i>
+    <!-- Button scroll -->
+    <button class="position-fixed bg-primary justify-content-center text-white btn scroll-btn hide" id="scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+        </svg>
     </button>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/js/placeholder.js"></script>
     <script src="assets/js/base.js"></script>
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
