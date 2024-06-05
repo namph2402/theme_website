@@ -1,6 +1,6 @@
 :root {
 	--border-color: #dbdbdb;
-	--text-color: #884e4a;
+	--text-color: #634846;
 	--color-white: #fff;
 	--color-black: #000000;
 	--primary-color: #884e4a;
@@ -19,6 +19,10 @@ html {
 
 .text-primary {
 	color: var(--primary-color) !important;
+}
+
+.text-color {
+	color: var(--text-color) !important;
 }
 
 .text-white {

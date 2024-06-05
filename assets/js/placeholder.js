@@ -4,7 +4,7 @@
   $.fn.placeholderTypewriter = function (options) {
     var settings = $.extend({
       delay: 50,
-      pause: 1000,
+      pause: 500,
       text: []
     }, options);
 

@@ -195,8 +195,8 @@
 
     <div class="container-lg">
         <section class="row my-6">
-            <div class="d-flex product-detail">
-                <div class="overflow-hidden w-50 product-detail-img">
+            <div class="row h-auto">
+                <div class="overflow-hidden col-12 col-sm-6 col-lg-5 product-detail-img">
                     <div id="carouselExampleControlsNoTouching" class="carousel slide h-100" data-bs-touch="false">
                         <div class="carousel-inner h-100">
                             <div class="carousel-item active">
@@ -218,7 +218,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="flex-fill px-6 product-detail-info">
+                <div class="flex-fill px-6 col-12 col-sm-6 col-lg-7 product-detail-info">
                     <div class="pb-3 product-detail-header">
                         <h1 class="text-uppercase text-primary mb-3 product-detail-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</h1>
                         <span class="fs-4 text-primary">Mã SKU: 1314314</span>
@@ -261,18 +261,17 @@
                         </div>
                         <div class="product-detail-quantity d-flex align-items-center p-3">
                             <span class="fs-4 text-primary me-3">Số lượng</span>
-                            <a class="product-detail-btn btn-dash d-flex justify-content-center align-items-center">
+                            <a class="d-flex justify-content-center align-items-center product-detail-btn btn-dash">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-dash" viewBox="0 0 16 16">
                                     <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
                                 </svg>
                             </a>
-                            <input type="number" value="1" class="product-detail-input mx-4" maxlength="3" min="1">
-                            <a class="product-detail-btn btn-plus d-flex justify-content-center align-items-center">
+                            <input type="number" value="1" class="text-center text-primary border-none mx-4 product-detail-input" maxlength="3" min="1">
+                            <a class="d-flex justify-content-center align-items-center product-detail-btn btn-plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-plus" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
                                 </svg>
                             </a>
                         </div>
@@ -281,13 +280,13 @@
                             <button class="btn-primary">Thêm vào giỏ hàng</button>
                         </div>
                     </form>
-                    <div class="product-detail-summary pt-2">
+                    <!-- <div class="product-detail-summary pt-2">
                         <span>Màu son Black Rouge Air Fit Velvet A09 cam đất (Sweet Cinnamon) cực trendy đang nổi đình
                             đám,
                             chưa bao giờ hết hot tại thị trường Việt Nam. Gam màu tươi tắn, siêu tôn da cùng chất son
                             mịn
                             như lụa của A09 Black Rouge khiến phái đẹp vô cùng say mê</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="mt-5">
@@ -302,9 +301,9 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="home-tab"
+                    <div class="tab-pane fade show active w-100" id="one" role="tabpanel" aria-labelledby="home-tab"
                         tabindex="0">
-                        <div class=" product-detail-content px-4">
+                        <div class="w-100 px-4 product-detail-content">
                             <p>
                                 Cách đây ba năm, Trường ĐH Kinh tế TP.HCM đưa ra chính sách khen thưởng cho giảng viên
                                 có
@@ -350,17 +349,16 @@
                             </p>
                         </div>
                     </div>
-                    <div class="tab-pane fade product-detail-content" id="two" role="tabpanel"
-                        aria-labelledby="profile-tab" tabindex="0">
-                        <div class="d-flex w-100 px-4 pt-5">
-                            <div class="col-7">
-                                <ul class="review-list">
+                    <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="row w-100 pt-5">
+                            <div class="col-12 col-md-7">
+                                <ul class="overflow-auto review-list">
                                     <li class="review-item d-flex">
                                         <div class="review-info d-flex align-items-center">
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -378,7 +376,7 @@
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -393,7 +391,7 @@
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -408,7 +406,7 @@
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -423,7 +421,7 @@
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -438,7 +436,7 @@
                                             <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
                                                 alt="">
                                             <div class="review-author ms-4 flex-1">
-                                                <span class="review-name">Phan Nam</span>
+                                                <span class="d-block text-primary fw-bold review-name">Phan Nam</span>
                                                 <span class="review-time">24/02/2000</span>
                                             </div>
                                         </div>
@@ -450,19 +448,20 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-5 ms-5">
-                                <span class="review-title">Viết đánh giá</span>
+                            <div class="col-12 col-md-5">
+                                <span class="text-primary fw-bold review-title">Viết đánh giá</span>
                                 <form action="" class="mt-4">
-                                    <div class="review-rating">
+                                    <div class="text-color mb-4 review-rating">
                                         <span>Đánh giá:</span>
                                         <small class="text-primary fas fa-star"></small>
                                         <small class="text-primary fas fa-star"></small>
                                         <small class="text-primary fas fa-star"></small>
                                         <small class="text-primary fas fa-star"></small>
                                         <small class="text-primary fas fa-star"></small>
+                                        
                                     </div>
-                                    <textarea class="review-input" name="" id="" cols="70" rows="10"></textarea>
-                                    <button class="btn-primary mt-4">Đăng</button>
+                                    <textarea class="text-color p-3 w-100 review-input" name="" id="" cols="70" rows="10"></textarea>
+                                    <button class="btn btn-primary mt-4">Đăng</button>
                                 </form>
                             </div>
                         </div>
@@ -475,7 +474,7 @@
         <section class="px-4 mb-6">
             <a href="#" class="d-block mb-3 text-uppercase text-primary fs-1 mb-4 fw-medium">Sản phẩm đã xem</a>
             <div class="row my-5">
-                <div class="col-lg-3 col-sm-4 col-6">
+                <div class="col-lg-3 col-sm-4 col-6 mb-4">
                     <a href="#" class="position-relative d-block overflow-hidden product-item">
                         <div class="product-item-img w-100">
                             <img class="w-100"
@@ -510,7 +509,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-4 col-6">
+                <div class="col-lg-3 col-sm-4 col-6 mb-4">
                     <a href="#" class="position-relative d-block overflow-hidden product-item">
                         <div class="product-item-img w-100">
                             <img class="w-100"
@@ -545,7 +544,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-4 col-6">
+                <div class="col-lg-3 col-sm-4 col-6 mb-4">
                     <a href="#" class="position-relative d-block overflow-hidden product-item">
                         <div class="product-item-img w-100">
                             <img class="w-100"
@@ -580,7 +579,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-sm-4 col-6">
+                <div class="col-lg-3 col-sm-4 col-6 mb-4">
                     <a href="#" class="position-relative d-block overflow-hidden product-item">
                         <div class="product-item-img w-100">
                             <img class="w-100"

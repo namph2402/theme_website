@@ -7,11 +7,6 @@
   <title>Bootstrap demo</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="assets/bootstrap/576px.css">
-  <link rel="stylesheet" href="assets/bootstrap/768px.css">
-  <link rel="stylesheet" href="assets/bootstrap/992px.css">
-  <link rel="stylesheet" href="assets/bootstrap/1200px.css">
-  <link rel="stylesheet" href="assets/bootstrap/1400px.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -22,12 +17,9 @@
   <header class="py-3 fs-4">
     <div class="row container-xxl justify-content-center position-relative">
       <div class="col-md-1 d-lg-none d-flex align-items-center position-absolute top-25 left-0 w-auto header-list-md">
-        <button class="position-relative text-primary p-0" type="button" data-bs-toggle="modal"
-          data-bs-target="#menuModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        <button class="position-relative text-primary p-0" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
           </svg>
         </button>
       </div>
@@ -38,28 +30,24 @@
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-12 d-flex align-items-center overflow-hidden header-center">
         <form class="d-flex w-100 overflow-hidden" action="" method="get">
-          <input class="h-100 flex-fill" type="text" name="search" id="inputSearch" placeholder="Tìm kiếm sản phẩm">
+          <input class="h-100 flex-fill" type="text" name="search" id="inputSearch" placeholder="Tìm kiếm sản phẩm" data-placeholder="Tìm theo mã sản phẩm;Tìm theo tên sản phẩm;Tìm theo danh mục">
           <button class="h-100 px-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-              class="bi bi-search text-primary" viewBox="0 0 15 15">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-primary" viewBox="0 0 15 15">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
             </svg>
           </button>
         </form>
       </div>
       <div class="col-xl-5 col-lg-4 d-none d-lg-flex align-items-center justify-content-end">
         <a class="d-flex align-items-center ms-4" href="#">
-          <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/phone_icon.png" width="32" height="32"
-            class="me-3" alt="phone_icon">
+          <img src="assets/img/icon/phone_icon.webp" width="32" height="32" class="me-3" alt="phone_icon">
           <div class="d-none d-xl-block text-primary fs-4">
             <span class="d-block">Hỗ trợ khách hàng</span>
             <span class="fw-bold">(035) 664 5052</span>
           </div>
         </a>
         <a class="d-flex align-items-center ms-4" href="#">
-          <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/account_icon.png" width="32" height="32"
-            class="me-3" alt="phone_icon">
+          <img src="assets/img/icon/account_icon.webp" width="32" height="32" class="me-3" alt="account_icon">
           <div class="d-none d-xl-block text-primary fs-4">
             <span class="d-block">Tài khoản</span>
             <small class="text-primary header-right-text-user">Đăng nhập</small>
@@ -67,12 +55,11 @@
         </a>
         <div class="d-flex align-items-center ms-4 position-relative text-primary fs-4 header-right-cart">
           <a class="d-flex align-items-center px-3 py-2" href="cart.html">
-            <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="24" height="24"
-              alt="cart_icon">
+            <img src="assets/img/icon/cart_icon.webp" width="24" height="24" alt="cart_icon">
             <span class="p-2">Giỏ hàng</span>
             <span class="px-2 py-1 text-white header-right-cart-count">0</span>
           </a>
-          <div class="d-none bg-white position-absolute right-0 py-4 fs-4 header-cart-group">
+          <div class="d-none bg-white position-absolute right-0 py-4 fs-4 text-color header-cart-group">
             <!-- <div class="w-100 text-center">
               <span>Không có sản phẩm nào</span>
             </div> -->
@@ -80,17 +67,14 @@
               <li class="d-flex align-items-center header-cart-item">
                 <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
                 <div class="mx-3">
-                  <a href="#" class="d-block text-uppercase fs-4 text-primary header-cart-product-name">SON BLACK ROUGE
-                    AIR FIT VEL VET A09 (CAM ĐẤT)</a>
+                  <a href="#" class="d-block text-uppercase fs-4 text-primary header-cart-product-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
                   <div class="d-flex mt-1 fs-4">
                     <span class="fw-bold me-3">199.000đ</span>
                     <p>x1</p>
                   </div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-x-lg text-primary header-cart-delete" viewBox="0 0 16 16">
-                  <path
-                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg text-primary header-cart-delete" viewBox="0 0 16 16">
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                 </svg>
               </li>
             </ul>
@@ -104,8 +88,7 @@
       <div
         class="col-md-1 d-lg-none d-flex align-items-center justify-content-end px-3 position-absolute top-25 right-0 w-auto header-cart-md">
         <a class="d-flex align-items-center" href="cart.html">
-          <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="25" height="25"
-            alt="cart_icon">
+          <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="25" height="25" alt="cart_icon">
         </a>
       </div>
     </div>
@@ -333,7 +316,7 @@
       <div class="tab-content mt-5" id="myTabContent">
         <div class="row tab-pane fade show active" id="one-tab-pane" role="tabpanel" aria-labelledby="one-tab"
           tabindex="0">
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -364,7 +347,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -395,7 +378,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -426,7 +409,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -457,7 +440,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -488,7 +471,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -519,7 +502,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -550,7 +533,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -592,7 +575,7 @@
           </div>
         </div>
         <div class="row tab-pane fade" id="two-tab-pane" role="tabpanel" aria-labelledby="two-tab" tabindex="0">
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -623,7 +606,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -654,7 +637,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -685,7 +668,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -727,7 +710,7 @@
           </div>
         </div>
         <div class="row tab-pane fade" id="three-tab-pane" role="tabpanel" aria-labelledby="three-tab" tabindex="0">
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -758,7 +741,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -789,7 +772,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -836,7 +819,7 @@
   <!-- Promotion -->
   <section class="mb-6 bg-primary">
     <div class="row container-lg px-3 py-4 promotion">
-      <div class="d-block d-md-flex flex-wrap w-100 px-3 py-4 promotion-body">
+      <div class="d-block d-md-flex flex-wrap w-100 px-3 py-4 bg-white promotion-body">
         <div class="col-12 col-xl-6 d-flex flex-wrap">
           <div class=" col-12 col-sm-5">
             <a href="#" class="text-uppercase text-primary fs-1 m-0 fw-medium">Ưu đãi hot, đừng bỏ lỡ</a>
@@ -858,9 +841,9 @@
           </marquee>
         </div>
       </div>
-      <div class="px-3 pb-4 promotion-product">
+      <div class="px-3 pb-4 bg-white promotion-product">
         <div class="row">
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -891,7 +874,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -922,7 +905,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -953,7 +936,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-sm-4 col-6 mb-5">
+          <div class="col-lg-3 col-sm-4 col-6 mb-4">
             <a href="#" class="position-relative d-block overflow-hidden product-item">
               <div class="product-item-img w-100">
                 <img class="w-100"
@@ -971,13 +954,10 @@
               <div class="d-flex align-items-center justify-content-center position-absolute product-value-promotion">
                 <span>Hot</span>
               </div>
-              <div
-                class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
+              <div class="d-flex align-items-center justify-content-center w-auto position-absolute top-0 left-0 px-2 product-rating">
                 <span class="d-flex align-items-center justify-content-center text-white product-rating-value">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
-                    <path
-                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill text-primary" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                   </svg>
                   <p class="fw-bold m-1 fs-4">3</p>
                 </span>
@@ -1012,7 +992,7 @@
     <div class="row container-lg">
       <a href="#" class="text-uppercase text-primary fs-1 mb-4 fw-medium">Sản phẩm mới</a>
       <div class="row">
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1043,7 +1023,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1074,7 +1054,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1105,7 +1085,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1136,7 +1116,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1167,7 +1147,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1198,7 +1178,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1229,7 +1209,7 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-3 col-sm-4 col-6 mb-5">
+        <div class="col-lg-3 col-sm-4 col-6 mb-4">
           <a href="#" class="position-relative d-block overflow-hidden product-item">
             <div class="product-item-img w-100">
               <img class="w-100"
@@ -1277,7 +1257,7 @@
     <div class="row container-lg">
       <div class="text-uppercase text-primary fs-1 mb-4 fw-medium">Bài viết xu hướng</div>
       <div class="row">
-        <div class="col-xl-3 col-md-4 col-6">
+        <div class="col-xl-3 col-md-4 col-6 mb-4">
           <a href="http://" class="d-block post-item">
             <div class="d-flex justify-content-center post-img">
               <img class="w-100"
@@ -1302,7 +1282,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xl-3 col-md-4 col-6">
+        <div class="col-xl-3 col-md-4 col-6 mb-4">
           <a href="http://" class="d-block post-item">
             <div class="d-flex justify-content-center post-img">
               <img class="w-100"
@@ -1327,7 +1307,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xl-3 col-md-4 col-6">
+        <div class="col-xl-3 col-md-4 col-6 mb-4">
           <a href="http://" class="d-block post-item">
             <div class="d-flex justify-content-center post-img">
               <img class="w-100"
@@ -1352,7 +1332,7 @@
             </div>
           </a>
         </div>
-        <div class="col-xl-3 col-md-4 col-6">
+        <div class="col-xl-3 col-md-4 col-6 mb-4">
           <a href="http://" class="d-block post-item">
             <div class="d-flex justify-content-center post-img">
               <img class="w-100"
@@ -1378,7 +1358,7 @@
           </a>
         </div>
       </div>
-      <div class="mt-5 d-flex">
+      <div class="d-flex mt-4">
         <button class="btn-primary m-auto d-flex align-items-center">Xem thêm
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-chevron-right ms-1" viewBox="0 0 16 16">
@@ -1399,32 +1379,27 @@
         <span class="fs-4">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn Quốc</span>
         <div class="mt-4 fs-4 footer-info-profile">
           <span class="d-block mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
             </svg>
             Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy, Hà Nội
           </span>
           <span class="d-block mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone me-2"
-              viewBox="0 0 16 16">
-              <path
-                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone me-2" viewBox="0 0 16 16">
+              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
               <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
             </svg>
             Số điện thoại: 0985.321.272</span>
           <span class="d-block mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
             </svg>
             Email: blackrouge.com.vn@gmail.com</span>
         </div>
       </div>
     </div>
     <div class="col-lg-8 col-12 d-flex flex-wrap py-5 px-4" style="background: #47d0c7">
-      <div class="col-lg-4 col-sm-3 col-6">
+      <div class="col-lg-4 col-sm-3 col-6 ps-0 ps-lg-5">
         <div class="fw-bold text-white fs-3">
           Liên kết nhanh
         </div>
@@ -1469,10 +1444,8 @@
         <form class="d-flex mt-3 footer-form" action="" method="POST">
           <input class="px-4 fs-4 border-none" type="text" placeholder="Nhập email đăng ký">
           <button class="px-4 border-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-              class="bi bi-envelope-fill text-white" viewBox="0 0 16 16">
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill text-white" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
             </svg>
           </button>
         </form>
@@ -1480,8 +1453,7 @@
           Mạng xã hội
         </div>
         <div class="d-flex align-items-end mt-3 footer-info-icon-link">
-          <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/facebook.webp"
-              alt="facebook"></a>
+          <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/facebook.webp" alt="facebook"></a>
           <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/zalo.webp" alt="zalo"></a>
           <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/tiktok.webp" alt="tiktok"></a>
         </div>
@@ -1490,15 +1462,14 @@
   </footer>
   <!-- Button scroll -->
   <button class="position-fixed bg-primary justify-content-center text-white btn scroll-btn hide" id="scroll">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up"
-      viewBox="0 0 16 16">
-      <path fill-rule="evenodd"
-        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
     </svg>
   </button>
 
   <script src="assets/js/jquery.js"></script>
   <script src="assets/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/placeholder.js"></script>
   <script src="assets/js/base.js"></script>
 </body>
 
