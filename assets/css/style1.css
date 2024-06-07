@@ -701,7 +701,7 @@ footer {
 }
 
 /* scroll */
-.scroll-btn {
+.border-radius-50 scroll-btn {
 	position: fixed;
 	bottom: 3rem;
 	right: 3rem;
@@ -717,12 +717,12 @@ footer {
 }
 
 
-.scroll-btn svg {
+.border-radius-50 scroll-btn svg {
 	width: 2rem;
 	height: 2rem;
 }
 
-.scroll-btn:hover {
+.border-radius-50 scroll-btn:hover {
 	color: white;
 	background: #c97a74;
 }

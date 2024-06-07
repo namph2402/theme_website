@@ -14,7 +14,6 @@ header .row {
 
 .header-right-cart {
 	border: 2px solid var(--header-color);
-	border-radius: 0.5rem;
 }
 
 .header-right-cart:hover .header-cart-group {
@@ -23,7 +22,6 @@ header .row {
 
 .header-right-cart-count {
 	background: var(--header-color);
-	border-radius: 0.5rem;
 }
 
 .header-cart-group {
@@ -31,7 +29,6 @@ header .row {
 	width: 40rem;
 	top: 55px;
 	border: 1px solid rgb(243 193 193);
-	border-radius: 3px;
 	animation: lon_dan_len ease-in 0.2s;
     transform-origin: calc(100% - 5rem) top;
     will-change: opacity, transform;
@@ -174,7 +171,6 @@ header .row {
 /* title-main */
 .product-item {
 	border: 1px solid #f0f0f0;
-	border-radius: 5px;
 }
 
 .product-item:hover {
@@ -212,7 +208,6 @@ header .row {
 	right: 0.5rem;
 	width: 4rem;
 	height: 4rem;
-	border-radius: 50%;
 	font-size: 1.4rem;
 	line-height: 1;
 	color: red;
@@ -259,12 +254,8 @@ header .row {
 }
 
 .promotion-item {
-	font-weight: 500;
 	border: 1px solid var(--primary-color);
-	border-radius: 50%;
-	font-size: 1.2rem;
-	color: var(--primary-color);
-	width: 50px;
+	width: 5rem;
 }
 
 .promotion-product {
@@ -318,9 +309,7 @@ footer {
 }
 
 .footer-form input {
-	width: 35rem;
 	outline: none;
-	color: var(--text-color);
 	background: #f1f1f1;
 	border-radius: 2rem 0 0 2rem;
 }
@@ -358,7 +347,6 @@ footer {
 	padding: 1rem;
 	width: 5rem;
 	height: 5rem;
-	border-radius: 50%;
 	display: none;
 	animation: hien_dan_len linear 0.5s;
 }
@@ -390,7 +378,6 @@ footer {
 /* pagination */
 .pagination-link {
 	border: 1px solid rgb(211, 211, 211);
-	border-radius: 50%;
 	color: #8898aa;
 	width: 3.6rem;
 	height: 3.6rem;
@@ -479,6 +466,16 @@ footer {
 	.arrange-list a:hover {
 		background: #f0bfbc;
 	}
+
+	.link-user a {
+		text-align: center;
+		min-width: 33%;
+		border: 1px solid var(--header-color) !important;
+	}
+
+	.link-user a:hover {
+		transform: unset !important;
+	}
 }
 
 .filter-modal.fade .modal-dialog .modal-content {
@@ -555,7 +552,6 @@ footer {
 	font-size: 1.7rem;
 	color: #999;
 	background: none;
-	border-radius: 50%;
 	border: 1px solid rgb(211, 211, 211);
 }
 
@@ -572,14 +568,17 @@ footer {
 	background: none;
 }
 
-.product-detail-summary span{
-	font-size: 1.6rem;
-	line-height: 2.5rem;
-	color: var(--primary-color);
+.product-detail-error {
+	font-size: 1.4rem;
+	color: red;
+	top: -3rem;
+    left: 1rem;
 }
 
 .product-detail-desc li {
 	font-size: 1.9rem;
+	border-top-left-radius: 0.5rem;	
+	border-top-right-radius: 0.5rem;	
 }
 
 .product-detail-desc li button {
@@ -589,11 +588,11 @@ footer {
 
 .product-detail-desc li button:hover {
 	color: #999;
-	border: none !important;
 }
 
 .product-detail-desc li .active {
 	font-weight: bold;
+	border: 1px solid;
 	color: var(--primary-color) !important;
 }
 
@@ -608,13 +607,6 @@ footer {
 	display: block;
 	margin: auto;
 	width: 75%;
-}
-
-.product-detail-error {
-	font-size: 1.4rem;
-	color: red;
-	top: -3rem;
-    left: 1rem;
 }
 /* review */
 .review-list {
@@ -697,4 +689,37 @@ footer {
 
 .post-content {
 	line-height: 3rem;
+}
+
+/* Form account */
+.account-item button.active {
+	color: var(--primary-color);
+	background: white;
+}
+
+.forgot-password {
+	color: var(--text-color);
+	font-size: 1.4rem;
+	display: block;
+}
+
+/* User */
+.link-user a:hover {
+	transform: translateX(20px);
+	transition: all 0.3s;
+}
+
+.link-user a.active {
+	color: var(--primary-color) !important;
+}
+
+.link-user a.active:hover {
+	cursor: default;
+	transform: unset;
+}
+
+.user-avt {
+	border: 1px solid #eebcbc;
+	height: 20rem;
+	width: 20rem;
 }

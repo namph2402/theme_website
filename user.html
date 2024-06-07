@@ -6,228 +6,261 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div id="toast"></div>
-
-    <header>
-        <a class="col-3 header-logo h-100 px-4" href="">
-            <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo.png?1710827597851" alt=""
-                height="45">
-        </a>
-
-        <div class="col-4 header-search">
-            <form class="header-form d-flex" action="/" method="GET">
-                <input type="text" name="search" id="inputSearch"
-                    data-placeholder="Tìm theo danh mục ...;Tìm theo mã sản phẩm ...;Tìm kiếm sản phẩm ...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-
-        <div class="col-5 d-flex justify-content-end align-items-center px-4">
-            <div class="header-phone d-flex align-items-center">
-                <i class="fa-solid fa-phone-volume header-icon"></i>
-                <div class="header-text">
-                    <span class="d-block">Liên hệ hỗ trợ</span>
-                    <span class="header-text-info">(035) 664 5052</span>
-                </div>
+    <!-- Header -->
+    <header class="py-3 fs-4">
+        <div class="row container-xxl justify-content-center position-relative">
+            <div
+                class="col-md-1 d-lg-none d-flex align-items-center position-absolute top-25 left-0 w-auto header-list-md">
+                <button class="position-relative text-primary p-0" type="button" data-bs-toggle="modal"
+                    data-bs-target="#menuModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </button>
             </div>
-            <div class="d-flex align-items-center px-4">
-                <i class="fa-solid fa-user header-icon"></i>
-                <a href="#" class="header-text">
-                    <span class="d-block">Tài khoản</span>
-                    <span class="header-text-info">Đăng nhập</span>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-6 d-flex align-items-center h-100">
+                <a href="#" class="d-flex justify-content-center w-100 h-100">
+                    <img src="https://lephunghieu.pizzahips.com/themes/custom/hips_resto/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="header-cart">
-                <a class="header-cart-link d-flex align-items-center p-2" href="cart.html">
-                    <i class="fa-solid fa-cart-shopping header-icon"></i>
-                    <div class="header-text">
-                        <span class="header-text-info">Giỏ hàng</span>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12 d-flex align-items-center overflow-hidden header-center">
+                <form class="d-flex w-100 overflow-hidden" action="" method="get">
+                    <input class="h-100 flex-fill" type="text" name="search" id="inputSearch"
+                        placeholder="Tìm kiếm sản phẩm"
+                        data-placeholder="Tìm theo mã sản phẩm;Tìm theo tên sản phẩm;Tìm theo danh mục">
+                    <button class="h-100 px-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-search text-primary" viewBox="0 0 15 15">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="col-xl-5 col-lg-4 d-none d-lg-flex align-items-center justify-content-end">
+                <a class="d-flex align-items-center ms-4" href="#">
+                    <img src="assets/img/icon/phone_icon.webp" width="32" height="32" class="me-3" alt="phone_icon">
+                    <div class="d-none d-xl-block text-primary fs-4">
+                        <span class="d-block">Hỗ trợ khách hàng</span>
+                        <span class="fw-bold">(035) 664 5052</span>
                     </div>
                 </a>
-                <div class="cart-group py-4 ps-4">
-                    <!-- <div class="w-100 text-center">
-                <span>Không có sản phẩm nào</span>
-              </div> -->
-                    <ul class="cart-list border-bottom pe-4">
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
+                <a class="d-flex align-items-center ms-4" href="#">
+                    <img src="assets/img/icon/account_icon.webp" width="32" height="32" class="me-3" alt="account_icon">
+                    <div class="d-none d-xl-block text-primary fs-4">
+                        <span class="d-block">Tài khoản</span>
+                        <small class="text-primary header-right-text-user">Đăng nhập</small>
+                    </div>
+                </a>
+                <div class="d-flex align-items-center ms-4 position-relative text-primary fs-4 border-radius-min header-right-cart">
+                    <a class="d-flex align-items-center px-3 py-2" href="cart.html">
+                        <img src="assets/img/icon/cart_icon.webp" width="24" height="24" alt="cart_icon">
+                        <span class="p-2">Giỏ hàng</span>
+                        <span class="px-2 py-1 text-white border-radius-min header-right-cart-count">0</span>
+                    </a>
+                    <div class="d-none bg-white position-absolute right-0 py-4 fs-4 text-color border-radius-min header-cart-group">
+                        <!-- <div class="w-100 text-center">
+              <span>Không có sản phẩm nào</span>
+            </div> -->
+                        <ul class="border-bottom pe-4 overflow-auto header-cart-list">
+                            <li class="d-flex align-items-center header-cart-item">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
+                                    alt="">
+                                <div class="mx-3">
+                                    <a href="#"
+                                        class="d-block text-uppercase fs-4 text-primary header-cart-product-name">SON
+                                        BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
+                                    <div class="d-flex mt-1 fs-4">
+                                        <span class="fw-bold me-3">199.000đ</span>
+                                        <p>x1</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                        <li class="cart-item d-flex">
-                            <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                                alt="">
-                            <div class="mx-3">
-                                <a href="#" class="cart-product-name d-block">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM
-                                    ĐẤT)</a>
-                                <div class="cart-price mt-1">
-                                    <span>199.000đ</span>
-                                    <p>x1</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-xmark cart-delete p-2"></i>
-                        </li>
-
-                    </ul>
-                    <div class="cart-total d-flex align-items-center pt-3">
-                        <span>Tổng tiền tạm tính:</span>
-                        <span class="cart-total-price d-block ms-2">199.999đ</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-x-lg text-primary header-cart-delete" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center pt-3 ps-3 fs-4 text-primary">
+                            <span>Tổng tiền tạm tính:</span>
+                            <span class="d-block ms-2 fw-bold fs-3">199.999đ</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div
+                class="col-md-1 d-lg-none d-flex align-items-center justify-content-end px-3 position-absolute top-25 right-0 w-auto header-cart-md">
+                <a class="d-flex align-items-center" href="cart.html">
+                    <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="25" height="25"
+                        alt="cart_icon">
+                </a>
+            </div>
         </div>
     </header>
-
-    <section class="menu">
-        <div class="d-flex px-4">
-            <div class="menu-category d-flex align-items-center">
-                <i class="fa-solid fa-list"></i>
-                <span>Danh mục sản phẩm</span>
+    <!-- Menu -->
+    <section class="d-lg-flex d-none justify-content-center py-3 nav-menu">
+        <div class="row container-lg">
+            <div class="col-12 d-flex">
+                <div class="d-flex align-items-center justify-content-center bg-white nav-menu-category">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list-ul me-3" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                    </svg>
+                    <span class="fw-medium fs-3">Danh mục sản phẩm</span>
+                </div>
+                <ul class="d-flex align-items-center justify-content-center nav-menu-list">
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Sản
+                            phẩm</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Tin
+                            tức</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Sản
+                            phẩm</a>
+                    </li>
+                    <li class="h-100 py-2 px-4">
+                        <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+                            href="/he-thong-cua-hang-phan-phoi">Tin
+                            tức</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="menu-list d-flex align-items-center">
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Trang chủ</a>
-                </li>
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Sản phẩm</a>
-                </li>
-                <li>
-                    <a class="link" href="/he-thong-cua-hang-phan-phoi" title="Hệ thống cửa hàng">Tin tức</a>
-                </li>
-            </ul>
         </div>
     </section>
-
-    <section class="my-6 px-4">
-        <div class="row mt-5 d-flex justify-content-between">
-            <div class="w-20">
+    <!-- Modal menu -->
+    <section class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content d-flex flex-row-reverse content-menu">
+                <div class="modal-header w-10">
+                    <button type="button" class="btn-close text-primary" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body w-auto">
+                    <div class="menu-modal">
+                        <ul class="p-0">
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form -->
+    <section class="mb-6">
+        <div class="row container-lg my-6">
+            <div class="col-12 col-lg-3 mb-4">
                 <div class="border-end me-4">
-                    <ul class="link-user">
-                        <a class="d-block active" href="">Thông tin</a>
-                        <a class="d-block" href="">Đổi mật khẩu</a>
-                        <a class="d-block" href="">Đơn hàng</a>
-                        <a class="d-block" href="">Địa chỉ</a>
-                        <a class="d-block" href="">Đăng xuất</a>
+                    <ul class="m-0 p-0 link-user d-flex d-lg-block flex-wrap justify-content-between">
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0 active"
+                            href="">Thông tin</a>
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0"
+                            href="">Đổi mật khẩu</a>
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0"
+                            href="">Đơn hàng</a>
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0"
+                            href="">Voucher</a>
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0"
+                            href="">Địa chỉ</a>
+                        <a class="d-block fs-3 fw-semibold text-color border-bottom py-3 px-2 px-lg-4 mb-2 mb-lg-0"
+                            href="">Đăng xuất</a>
                     </ul>
                 </div>
             </div>
-            <div class="flex-1">
-                <div class="arrange mb-4 pb-2">
-                    <h1 class="title-main-header-title d-block mb-3">Thông tin khách hàng</h1>
+            <div class="col-12 col-lg-9">
+                <div class="mb-4">
+                    <h1 class="d-block mb-3 text-uppercase text-primary fs-1 fw-medium">Thông tin khách hàng</h1>
                 </div>
-                <form class="row">
-                    <div class="col-9 row">
-                        <div class="col-6 mb-5">
-                            <label for="username" class="form-label">Tên đăng nhập</label>
-                            <input class="form-control" id="username" value="Phannam123" disabled>
+                <form class="row flex-wrap flex-sm-nowrap flex-column-reverse flex-sm-row">
+                    <div class="col-12 col-sm-7 col-lg-8 col-xl-9 row">
+                        <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-5">
+                            <label for="username" class="form-label fs-4 fw-semibold text-primary">Tên đăng nhập</label>
+                            <input class="form-control text-color p-3 fs-4" id="username" value="Phannam123" disabled>
                         </div>
-                        <div class="col-6 mb-5">
-                            <label for="email" class="form-label">Email</label>
-                            <input class="form-control" id="email" value="nam@gmail.com" disabled>
+                        <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-5">
+                            <label for="email" class="form-label fs-4 fw-semibold text-primary">Email</label>
+                            <input class="form-control text-color p-3 fs-4" id="email" value="nam@gmail.com" disabled>
                         </div>
-                        <div class="col-6 mb-5">
-                            <label for="fullname" class="form-label">Họ tên</label>
-                            <input type="text" class="form-control" id="fullname">
+                        <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-5">
+                            <label for="fullname" class="form-label fs-4 fw-semibold text-primary">Họ tên</label>
+                            <input type="text" class="form-control text-color p-3 fs-4" id="fullname">
                         </div>
-                        <div class="col-6 mb-5">
-                            <label for="phone" class="form-label">Số điện thoại</label>
-                            <input type="tel" class="form-control" id="phone">
+                        <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-5">
+                            <label for="phone" class="form-label fs-4 fw-semibold text-primary">Số điện thoại</label>
+                            <input type="tel" class="form-control text-color p-3 fs-4" id="phone">
                         </div>
-                        <div class="col-4 mb-5">
-                            <label for="province" class="form-label">Tỉnh/Thành phố</label>
-                            <select class="form-control" name="province" id="province">
+                        <div class="col-12 col-md-4 col-lg-12 col-xl-4 mb-5">
+                            <label for="province" class="form-label fs-4 fw-semibold text-primary">Tỉnh/Thành
+                                phố</label>
+                            <select class="form-control text-color p-3 fs-4" name="province" id="province">
                                 <option selected disabled hidden>Chọn một</option>
                             </select>
                         </div>
-                        <div class="col-4 mb-5">
-                            <label for="district" class="form-label">Huyện/Quận</label>
-                            <select class="form-control" name="district" id="district">
+                        <div class="col-12 col-md-4 col-lg-12 col-xl-4 mb-5">
+                            <label for="district" class="form-label fs-4 fw-semibold text-primary">Huyện/Quận</label>
+                            <select class="form-control text-color p-3 fs-4" name="district" id="district">
                                 <option selected disabled hidden>Chọn một</option>
                             </select>
                         </div>
-                        <div class="col-4 mb-5">
-                            <label for="ward" class="form-label">Xã/Phường</label>
-                            <select class="form-control" name="ward" id="ward">
+                        <div class="col-12 col-md-4 col-lg-12 col-xl-4 mb-5">
+                            <label for="ward" class="form-label fs-4 fw-semibold text-primary">Xã/Phường</label>
+                            <select class="form-control text-color p-3 fs-4" name="ward" id="ward">
                                 <option selected disabled hidden>Chọn một</option>
                             </select>
                         </div>
                         <div class="col-12 mb-5">
-                            <label for="address" class="form-label">Địa chỉ</label>
-                            <input type="text" class="form-control" id="address">
+                            <label for="address" class="form-label fs-4 fw-semibold text-primary">Địa chỉ</label>
+                            <input type="text" class="form-control text-color p-3 fs-4" id="address">
                         </div>
-                        <div class="col-12 text-center">
+                        <div class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary w-25">Cập nhật</button>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="user-avt mt-3 m-auto">
+                    <div class="col-12 col-sm-5 col-lg-4 col-xl-3">
+                        <div class="mt-3 m-auto overflow-hidden border-radius-50 user-avt">
                             <img class="w-100 h-100" id="img-preview"
                                 src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/right_banner_1.jpg?1710827597851"
                                 alt="">
                         </div>
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-4 mb-5">
                             <input type="file" name="file" id="file" accept=".jpg, .png" class="inputfile" />
                             <label class="px-4 py-3" for="file">Tải ảnh</label>
                         </div>
@@ -236,194 +269,122 @@
             </div>
         </div>
     </section>
-
-    <section class="mb-6 px-4">
-        <a href="#" class="title-main-header-title">Sản phẩm đã xem</a>
-        <div class="row mt-5">
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT) a a a a a a a a a
-                            a a a a a a
-                            a a a a</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                    <div class="product-value-promotion">
-                        <span>Hot</span>
-                    </div>
-                    <div class="product-rating">
-                        <span class="product-rating-value">
-                            <small class="text-primary fas fa-star"></small>
-                            <p class="product-rating-number">3</p>
-                        </span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-2 mb-5 w-20">
-                <a href="#" class="product-item d-block">
-                    <div class="product-item-img w-100">
-                        <img class="w-100"
-                            src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633"
-                            alt="">
-                    </div>
-                    <div class="product-item-info">
-                        <span class="product-item-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</span>
-                        <div class="product-price">
-                            <span class="product-price-new"> 100.000đ</span>
-                            <span class="product-price-old"> 100.000đ</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="d-flex">
-        <div class="col-4 footer-left h-100" style="background: #41aea7;">
-            <div class="footer-logo">
+    <!-- Footer -->
+    <footer class="d-block d-lg-flex text-white">
+        <div class="col-lg-4 col-12 py-5 px-4" style="background: #41aea7;">
+            <div>
                 <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo-footer.png?1710827597851"
                     alt="">
             </div>
-            <div class="footer-info mt-4">
-                <span class="footer-info-text">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn
-                    Quốc</span>
-                <div class="footer-info-profile mt-4">
-                    <span class="d-block"><i class="fa-solid fa-location-dot"></i>Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa,
-                        Cầu Giấy,
-                        Hà Nội</span>
-                    <span class="d-block"><i class="fa-solid fa-mobile-screen-button"></i>Số điện thoại:
-                        0985.321.272</span>
-                    <span class="d-block"><i class="fa-solid fa-envelope"></i>Email: blackrouge.com.vn@gmail.com</span>
+            <div class="mt-4">
+                <span class="fs-4">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn Quốc</span>
+                <div class="mt-4 fs-4 footer-info-profile">
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy, Hà Nội
+                    </span>
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-phone me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                        </svg>
+                        Số điện thoại: 0985.321.272</span>
+                    <span class="d-block mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                        Email: blackrouge.com.vn@gmail.com</span>
                 </div>
             </div>
         </div>
-        <div class="col-8 footer-right h-100 d-flex" style="background: #47d0c7">
-            <div class="col-4 ps-5">
-                <div class="footer-right-header">
+        <div class="col-lg-8 col-12 d-flex flex-wrap py-5 px-4" style="background: #47d0c7">
+            <div class="col-lg-4 col-sm-3 col-6 ps-0 ps-lg-5">
+                <div class="fw-bold text-white fs-3">
                     Liên kết nhanh
                 </div>
                 <ul>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Trang chủ</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Trang chủ</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Sản phẩm</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Sản phẩm</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Tin tức</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Tin tức</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Giới thiệu</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Giới thiệu</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <div class="footer-right-header">
+            <div class="col-lg-4 col-sm-4 col-6 mb-4">
+                <div class="fw-bold text-white fs-3">
                     Chính sách cửa hàng
                 </div>
                 <ul>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Trang chủ</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Trang chủ</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Sản phẩm</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Sản phẩm</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Tin tức</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Tin tức</a>
                     </li>
-                    <li class="footer-right-item mt-3">
-                        <a href="http://">Giới thiệu</a>
+                    <li class="mt-3">
+                        <a class="text-white fs-4" href="http://">Giới thiệu</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-4">
-                <div class="footer-right-header">
+            <div class="col-lg-4 col-sm-5 col-12">
+                <div class="fw-bold text-white fs-3">
                     Đăng ký nhận tin
                 </div>
-                <form class="header-form d-flex mt-3" action="" method="POST">
-                    <input type="text" placeholder="Nhập email đăng ký">
-                    <button><i class="fa-solid fa-envelope"></i></button>
+                <form class="d-flex mt-3 footer-form" action="" method="POST">
+                    <input class="px-4 fs-4 w-100 text-color border-none" type="text" placeholder="Nhập email đăng ký">
+                    <button class="px-4 border-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope-fill text-white" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                    </button>
                 </form>
-                <div class="footer-right-header mt-5">
+                <div class="fw-bold text-white fs-3 mt-4">
                     Mạng xã hội
                 </div>
-                <div class="footer-info-icon d-flex align-items-end mt-3">
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/facebook.webp"
+                <div class="d-flex align-items-end mt-3 footer-info-icon-link">
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/facebook.webp"
                             alt="facebook"></a>
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/zalo.webp" alt="zalo"></a>
-                    <a class="footer-info-icon-link" href="http://"><img src="assets/img/tiktok.webp" alt="tiktok"></a>
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/zalo.webp"
+                            alt="zalo"></a>
+                    <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/tiktok.webp"
+                            alt="tiktok"></a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <button class="scroll-btn btn" id="scroll">
-        <i class="fa-solid fa-chevron-up"></i>
+    <!-- Button scroll -->
+    <button class="position-fixed bg-primary justify-content-center text-white btn border-radius-50 scroll-btn hide" id="scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+        </svg>
     </button>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/bootstrap/bootstrap.min.js"></script>
     <script src="assets/js/placeholder.js"></script>
     <script src="assets/js/base.js"></script>
-    <script src="assets/js/main.js"></script>
 
     <script>
         const input = document.getElementById('file');

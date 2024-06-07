@@ -1,0 +1,330 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload='promotion("2025-02-24 00:00:00")' style="background: rgb(221, 221, 221)">
+  <div id="toast"></div>
+  <!-- Header -->
+  <header class="py-3 fs-4">
+    <div class="row container-xxl justify-content-center position-relative">
+      <div class="col-md-1 d-lg-none d-flex align-items-center position-absolute top-25 left-0 w-auto header-list-md">
+        <button class="position-relative text-primary p-0" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-4 col-6 d-flex align-items-center h-100">
+        <a href="#" class="d-flex justify-content-center w-100 h-100">
+          <img src="https://lephunghieu.pizzahips.com/themes/custom/hips_resto/logo.svg" alt="logo">
+        </a>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12 d-flex align-items-center overflow-hidden header-center">
+        <form class="d-flex w-100 overflow-hidden" action="" method="get">
+          <input class="h-100 flex-fill" type="text" name="search" id="inputSearch" placeholder="Tìm kiếm sản phẩm" data-placeholder="Tìm theo mã sản phẩm;Tìm theo tên sản phẩm;Tìm theo danh mục">
+          <button class="h-100 px-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search text-primary" viewBox="0 0 15 15">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="col-xl-5 col-lg-4 d-none d-lg-flex align-items-center justify-content-end">
+        <a class="d-flex align-items-center ms-4" href="#">
+          <img src="assets/img/icon/phone_icon.webp" width="32" height="32" class="me-3" alt="phone_icon">
+          <div class="d-none d-xl-block text-primary fs-4">
+            <span class="d-block">Hỗ trợ khách hàng</span>
+            <span class="fw-bold">(035) 664 5052</span>
+          </div>
+        </a>
+        <a class="d-flex align-items-center ms-4" href="#">
+          <img src="assets/img/icon/account_icon.webp" width="32" height="32" class="me-3" alt="account_icon">
+          <div class="d-none d-xl-block text-primary fs-4">
+            <span class="d-block">Tài khoản</span>
+            <small class="text-primary header-right-text-user">Đăng nhập</small>
+          </div>
+        </a>
+        <div class="d-flex align-items-center ms-4 position-relative text-primary fs-4 border-radius-min header-right-cart">
+          <a class="d-flex align-items-center px-3 py-2" href="cart.html">
+            <img src="assets/img/icon/cart_icon.webp" width="24" height="24" alt="cart_icon">
+            <span class="p-2">Giỏ hàng</span>
+            <span class="px-2 py-1 text-white border-radius-min header-right-cart-count">0</span>
+          </a>
+          <div class="d-none bg-white position-absolute right-0 py-4 fs-4 text-color border-radius-min header-cart-group">
+            <!-- <div class="w-100 text-center">
+              <span>Không có sản phẩm nào</span>
+            </div> -->
+            <ul class="border-bottom pe-4 overflow-auto header-cart-list">
+              <li class="d-flex align-items-center header-cart-item">
+                <img src="https://bizweb.dktcdn.net/thumb/large/100/347/946/products/trang.jpg?v=1702979068633" alt="">
+                <div class="mx-3">
+                  <a href="#" class="d-block text-uppercase fs-4 text-primary header-cart-product-name">SON BLACK ROUGE AIR FIT VEL VET A09 (CAM ĐẤT)</a>
+                  <div class="d-flex mt-1 fs-4">
+                    <span class="fw-bold me-3">199.000đ</span>
+                    <p>x1</p>
+                  </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg text-primary header-cart-delete" viewBox="0 0 16 16">
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center pt-3 ps-3 fs-4 text-primary">
+              <span>Tổng tiền tạm tính:</span>
+              <span class="d-block ms-2 fw-bold fs-3">199.999đ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-1 d-lg-none d-flex align-items-center justify-content-end px-3 position-absolute top-25 right-0 w-auto header-cart-md">
+        <a class="d-flex align-items-center" href="cart.html">
+          <img src="//bizweb.dktcdn.net/100/347/946/themes/935043/assets/cart_icon.png" width="25" height="25" alt="cart_icon">
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Menu -->
+  <section class="d-lg-flex d-none justify-content-center py-3 nav-menu">
+    <div class="row container-lg">
+      <div class="col-12 d-flex">
+        <div class="d-flex align-items-center justify-content-center bg-white nav-menu-category">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul me-3"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+          </svg>
+          <span class="fw-medium fs-3">Danh mục sản phẩm</span>
+        </div>
+        <ul class="d-flex align-items-center justify-content-center nav-menu-list">
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+              href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+          </li>
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium" href="/he-thong-cua-hang-phan-phoi">Sản
+              phẩm</a>
+          </li>
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium" href="/he-thong-cua-hang-phan-phoi">Tin
+              tức</a>
+          </li>
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium"
+              href="/he-thong-cua-hang-phan-phoi">Trang chủ</a>
+          </li>
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium" href="/he-thong-cua-hang-phan-phoi">Sản
+              phẩm</a>
+          </li>
+          <li class="h-100 py-2 px-4">
+            <a class="d-flex align-items-center text-white fs-3 h-100 fw-medium" href="/he-thong-cua-hang-phan-phoi">Tin
+              tức</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Modal menu -->
+  <section class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content d-flex flex-row-reverse content-menu">
+        <div class="modal-header w-10">
+          <button type="button" class="btn-close text-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body w-auto">
+          <div class="menu-modal">
+            <ul class="p-0">
+              <li>
+                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+              </li>
+              <li>
+                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+              </li>
+              <li>
+                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+              </li>
+              <li>
+                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+              </li>
+              <li>
+                <a class="d-block fs-4 p-3 fw-medium" href="">Trang chủ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Form -->
+  <section class="mb-6">
+    <div class="row container-lg">
+      <div class="m-auto mt-5 col-10 col-md-8 col-lg-7">
+        <ul class="nav-tabs w-100" id="myTab" role="tablist">
+          <li class="nav-item w-50 account-item" role="presentation">
+            <button class="nav-link text-white w-100 active" id="signin-tab" data-bs-toggle="tab" data-bs-target="#one" type="button" role="tab" aria-controls="one" aria-selected="true">Đăng nhập</button>
+          </li>
+          <li class="nav-item w-50 account-item" role="presentation">
+            <button class="nav-link text-white w-100" id="signup-tab" data-bs-toggle="tab" data-bs-target="#two" type="button" role="tab" aria-controls="two" aria-selected="false">Đăng ký</button>
+          </li>
+        </ul>
+        <div class="tab-content w-100 bg-white" id="myTabContent">
+          <div class="tab-pane fade show active w-100" id="one" role="tabpanel" aria-labelledby="signin-tab" tabindex="0">
+            <form class="row w-100 py-5">
+              <div class="text-center mb-3">
+                <span class="d-block text-primary mb-2 text-uppercase form-title fs-1 fw-semibold ">Đăng nhập tài khoản</span>
+              </div>
+              <div class="m-auto w-75">
+                <div class="mb-4">
+                  <label for="email" class="form-label fs-4 fw-bold text-primary">Email</label>
+                  <input type="email" class="form-control text-color p-3 fs-4" id="email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label fs-4 fw-bold text-primary">Mật khẩu</label>
+                  <input type="password" class="form-control text-color p-3 fs-4" id="password">
+                </div>
+                <a class="text-color fs-4 mt-1" href="http://">Quên mật khẩu ?</a>
+                <button type="submit" class="btn btn-primary mt-5 w-100">Đăng nhập</button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+            <form class="row w-100 py-5">
+              <div class="text-center mb-3">
+                <span class="d-block text-primary mb-2 text-uppercase form-title fs-1 fw-semibold ">Đăng ký tài khoản</span>
+              </div>
+              <div class="m-auto w-75">
+                <div class="mb-4">
+                  <label for="email" class="form-label fs-4 fw-bold text-primary">Email</label>
+                  <input type="email" class="form-control text-color p-3 fs-4" id="email">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label fs-4 fw-bold text-primary">Mật khẩu</label>
+                  <input type="password" class="form-control text-color p-3 fs-4" id="password">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label fs-4 fw-bold text-primary">Nhập lại mật khẩu</label>
+                  <input type="password" class="form-control text-color p-3 fs-4" id="password">
+                </div>
+                <button type="submit" class="btn btn-primary mt-5 w-100">Đăng ký</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="d-block d-lg-flex text-white">
+    <div class="col-lg-4 col-12 py-5 px-4" style="background: #41aea7;">
+      <div>
+        <img src="https://bizweb.dktcdn.net/100/347/946/themes/935043/assets/logo-footer.png?1710827597851" alt="">
+      </div>
+      <div class="mt-4">
+        <span class="fs-4">Website phân phối bán lẻ các sản phẩm chính hãng từ Black Rouge Hàn Quốc</span>
+        <div class="mt-4 fs-4 footer-info-profile">
+          <span class="d-block mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill me-2" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+            </svg>
+            Địa chỉ: Số 3/52 Quan Nhân, Trung Hòa, Cầu Giấy, Hà Nội
+          </span>
+          <span class="d-block mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone me-2" viewBox="0 0 16 16">
+              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+            </svg>
+            Số điện thoại: 0985.321.272</span>
+          <span class="d-block mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill me-2" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+            Email: blackrouge.com.vn@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-12 d-flex flex-wrap py-5 px-4" style="background: #47d0c7">
+      <div class="col-lg-4 col-sm-3 col-6 ps-0 ps-lg-5">
+        <div class="fw-bold text-white fs-3">
+          Liên kết nhanh
+        </div>
+        <ul>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Trang chủ</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Sản phẩm</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Tin tức</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Giới thiệu</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-sm-4 col-6 mb-4">
+        <div class="fw-bold text-white fs-3">
+          Chính sách cửa hàng
+        </div>
+        <ul>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Trang chủ</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Sản phẩm</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Tin tức</a>
+          </li>
+          <li class="mt-3">
+            <a class="text-white fs-4" href="http://">Giới thiệu</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-sm-5 col-12">
+        <div class="fw-bold text-white fs-3">
+          Đăng ký nhận tin
+        </div>
+        <form class="d-flex mt-3 footer-form" action="" method="POST">
+          <input class="px-4 fs-4 w-100 text-color border-none" type="text" placeholder="Nhập email đăng ký">
+          <button class="px-4 border-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill text-white" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+            </svg>
+          </button>
+        </form>
+        <div class="fw-bold text-white fs-3 mt-4">
+          Mạng xã hội
+        </div>
+        <div class="d-flex align-items-end mt-3 footer-info-icon-link">
+          <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/facebook.webp" alt="facebook"></a>
+          <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/zalo.webp" alt="zalo"></a>
+          <a class="d-block me-4" href="http://"><img class="w-100 h-100" src="assets/img/tiktok.webp" alt="tiktok"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Button scroll -->
+  <button class="position-fixed bg-primary justify-content-center text-white btn border-radius-50 scroll-btn hide" id="scroll">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
+    </svg>
+  </button>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/placeholder.js"></script>
+  <script src="assets/js/base.js"></script>
+</body>
+
+</html>

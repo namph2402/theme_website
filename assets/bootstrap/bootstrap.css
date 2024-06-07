@@ -6,6 +6,7 @@
 
 :root {
     --bs-body-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --border-color: #dee2e6;
 }
 
 body {
@@ -14,11 +15,11 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
     user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button,
@@ -159,9 +160,45 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+/* Form */
+.form-control {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    outline: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-control::-webkit-date-and-time-value {
+    min-width: 85px;
+    height: 1.5em;
+    margin: 0
+}
+
+.form-control::-webkit-datetime-edit {
+    display: block;
+    padding: 0
+}
+
+.form-control::placeholder {
+    color: #212529bf;
+    opacity: 1
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+    opacity: 1
+}
+
 /* Border */
 .border {
-    border: 1px solid #dee2e6 !important
+    border: 1px solid var(--border-color) !important
 }
 
 .border-none {
@@ -169,19 +206,27 @@ input::-webkit-inner-spin-button {
 }
 
 .border-top {
-    border-top: 1px solid #dee2e6 !important
+    border-top: 1px solid var(--border-color) !important
 }
 
 .border-left {
-    border-left: 1px solid #dee2e6 !important
+    border-left: 1px solid var(--border-color) !important
 }
 
 .border-right {
-    border-right: 1px solid #dee2e6 !important
+    border-right: 1px solid var(--border-color) !important
 }
 
 .border-bottom {
-    border-bottom: 1px solid #dee2e6 !important
+    border-bottom: 1px solid var(--border-color) !important
+}
+
+.border-radius-min {
+    border-radius: 0.5rem !important;
+}
+
+.border-radius-50 {
+    border-radius: 50% !important;
 }
 
 /* Width */
@@ -306,6 +351,10 @@ h6 {
 
 .text-uppercase {
     text-transform: uppercase !important
+}
+
+.text-underline {
+    text-transform: underline !important
 }
 
 .text-decoration-line-through {
@@ -885,6 +934,22 @@ h6 {
     flex-wrap: nowrap !important
 }
 
+.flex-row {
+    flex-direction: row !important
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse !important
+}
+
+.flex-column {
+    flex-direction: column !important
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse !important
+}
+
 .justify-content-start {
     justify-content: flex-start !important
 }
@@ -919,14 +984,6 @@ h6 {
 
 .align-items-center {
     align-items: center !important
-}
-
-.flex-row {
-    flex-direction: row !important
-}
-
-.flex-row-reverse {
-    flex-direction: row-reverse !important
 }
 
 /* Grild */
@@ -1023,23 +1080,6 @@ h6 {
 .col-12 {
     flex: 0 0 auto;
     width: 100%
-}
-
-/* Tab */
-.tab-content>.tab-pane {
-    display: none
-}
-
-.tab-content>.active {
-    display: flex
-}
-
-.fade:not(.show) {
-    opacity: 0;
-}
-
-.fade {
-    transition: opacity .1s linear;
 }
 
 /* Carousel */
@@ -1321,11 +1361,11 @@ h6 {
 }
 
 /* Nav tab */
-.nav {
+.nav-tabs {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -1334,34 +1374,31 @@ h6 {
     padding: 0.5rem 1rem;
     font-size: 1.7rem;
     font-weight: 600;
-    color: rgb(175, 175, 175);
     text-decoration: none;
-    background: 0 0;
-}
-
-.nav-tabs {
-    border-bottom: 1px solid #dee2e6;
-}
-
-.nav-tabs .nav-link {
-    border: 1px solid transparent;
     min-width: 100px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-    isolation: isolate;
-    border-color: #dee2e6;
+.nav-item.show .nav-link,
+.nav-link.active {
+    cursor: default;
 }
 
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    cursor: default;
-    color: rgb(68, 68, 68);
-    background-color: transparent;
-    border-color: #dee2e6
+.tab-content>.tab-pane {
+    display: none
+}
+
+.tab-content>.active {
+    display: flex;
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.fade {
+    transition: opacity .1s linear;
 }
 
 /* Reponsive */
@@ -1453,6 +1490,22 @@ h6 {
 
     .flex-sm-nowrap {
         flex-wrap: nowrap !important
+    }
+
+    .flex-sm-row {
+        flex-direction: row !important
+    }
+    
+    .flex-sm-row-reverse {
+        flex-direction: row-reverse !important
+    }
+    
+    .flex-sm-column {
+        flex-direction: column !important
+    }
+    
+    .flex-sm-column-reverse {
+        flex-direction: column-reverse !important
     }
 
     .justify-content-sm-start {
@@ -2032,6 +2085,22 @@ h6 {
 
     .flex-md-nowrap {
         flex-wrap: nowrap !important
+    }
+
+    .flex-md-row {
+        flex-direction: row !important
+    }
+    
+    .flex-md-row-reverse {
+        flex-direction: row-reverse !important
+    }
+    
+    .flex-md-column {
+        flex-direction: column !important
+    }
+    
+    .flex-md-column-reverse {
+        flex-direction: column-reverse !important
     }
 
     .justify-content-md-start {
@@ -2614,6 +2683,22 @@ h6 {
         flex-wrap: nowrap !important
     }
 
+    .flex-lg-row {
+        flex-direction: row !important
+    }
+    
+    .flex-lg-row-reverse {
+        flex-direction: row-reverse !important
+    }
+    
+    .flex-lg-column {
+        flex-direction: column !important
+    }
+    
+    .flex-lg-column-reverse {
+        flex-direction: column-reverse !important
+    }
+
     .justify-content-lg-start {
         justify-content: flex-start !important
     }
@@ -3193,6 +3278,22 @@ h6 {
 
     .flex-xl-nowrap {
         flex-wrap: nowrap !important
+    }
+
+    .flex-xl-row {
+        flex-direction: row !important
+    }
+    
+    .flex-xl-row-reverse {
+        flex-direction: row-reverse !important
+    }
+    
+    .flex-xl-column {
+        flex-direction: column !important
+    }
+    
+    .flex-xl-column-reverse {
+        flex-direction: column-reverse !important
     }
 
     .justify-content-xl-start {
@@ -3791,6 +3892,22 @@ h6 {
 
     .flex-xxl-nowrap {
         flex-wrap: nowrap !important
+    }
+
+    .flex-xxl-row {
+        flex-direction: row !important
+    }
+    
+    .flex-xxl-row-reverse {
+        flex-direction: row-reverse !important
+    }
+    
+    .flex-xxl-column {
+        flex-direction: column !important
+    }
+    
+    .flex-xxl-column-reverse {
+        flex-direction: column-reverse !important
     }
 
     .justify-content-xxl-start {

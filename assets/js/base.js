@@ -34,10 +34,10 @@ function promotion(countDownDate) {
             days = hours = minutes = seconds = 0;
         }
         document.getElementById('countdown').innerHTML =
-            `<div class="promotion-item text-center me-4"><span class="d-block mt-2">` + days + `</span>Ngày</div>
-             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ hours + `</span>Giờ</div>
-             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ minutes + `</span>Phút</div>
-             <div class="promotion-item text-center me-4"><span class="d-block mt-2">`+ seconds + `</span>Giây</div>
+            `<div class="promotion-item text-primary fs-5 fw-medium border-radius-50 text-center me-4"><span class="d-block mt-2">` + days + `</span>Ngày</div>
+             <div class="promotion-item text-primary fs-5 fw-medium border-radius-50 text-center me-4"><span class="d-block mt-2">`+ hours + `</span>Giờ</div>
+             <div class="promotion-item text-primary fs-5 fw-medium border-radius-50 text-center me-4"><span class="d-block mt-2">`+ minutes + `</span>Phút</div>
+             <div class="promotion-item text-primary fs-5 fw-medium border-radius-50 text-center me-4"><span class="d-block mt-2">`+ seconds + `</span>Giây</div>
             `;
     }, 1000);
 }
